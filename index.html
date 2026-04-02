@@ -763,8 +763,7 @@ footer{
           <div class="calc-result-num" id="gapNum">—</div>
           <div class="calc-result-sub" id="gapSub"></div>
         </div>
-        <div class="calc-ai-insight" id="aiInsight"></div>
-        <div class="calc-result-card" style="border-color:rgba(248,113,113,0.4);background:rgba(120,30,30,0.3);">
+          <div class="calc-result-card" style="border-color:rgba(248,113,113,0.4);background:rgba(120,30,30,0.3);">
         <div class="calc-result-label" data-i18n="calc_r_timeloss">Cost of searching alone (vs. with CareerPlus)</div>
         <div class="calc-result-num" style="color:#f87171;" id="timeLossNum">—</div>
         <div class="calc-result-sub" id="timeLossSub"></div>
@@ -1285,7 +1284,6 @@ async function runCalcAI() {
       document.getElementById('alreadyLostCard').style.display = 'none';
     }
 
-    document.getElementById('aiInsight').textContent = result.insight[lang] || result.insight['en'];
     document.getElementById('calcLoading').style.display = 'none';
     document.getElementById('calcOutput').style.display = 'flex';
     document.getElementById('calcOutput').style.flexDirection = 'column';
