@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ButtonLink } from "@/components/ButtonLink";
+import { ConsultationButton } from "@/components/ConsultationQuiz";
 import { Container } from "@/components/Container";
 import { SectionHeader } from "@/components/SectionHeader";
 
@@ -80,7 +80,7 @@ export default function CasesPage() {
             ))}
           </div>
           <div className="mt-10">
-            <ButtonLink href="/contact">Обсудить похожую цель</ButtonLink>
+            <ConsultationButton>Обсудить похожую цель</ConsultationButton>
           </div>
         </Container>
       </section>

@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { ButtonLink } from "@/components/ButtonLink";
 import { Container } from "@/components/Container";
+import { ConsultationButton } from "@/components/ConsultationQuiz";
 import { MetricCard } from "@/components/MetricCard";
+import { SalaryCalculator } from "@/components/SalaryCalculator";
 import { SectionHeader } from "@/components/SectionHeader";
-import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Работа за рубежом для профессионалов",
@@ -60,6 +61,9 @@ export default function HomePage() {
               <ButtonLink href="/courses" variant="secondary">
                 Курсы для самостоятельного поиска
               </ButtonLink>
+              <ButtonLink href="/#salary-calculator" variant="ghost">
+                Проверить зарплату
+              </ButtonLink>
             </div>
           </div>
           <div className="rounded-[2rem] border border-border bg-secondary/70 p-6">
@@ -112,6 +116,8 @@ export default function HomePage() {
         </Container>
       </section>
 
+      <SalaryCalculator />
+
       <section className="py-20">
         <Container className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
           <SectionHeader eyebrow="О CareerPlus" title="Мы строим карьерный переход как проект, а не как хаотичный поиск." />
@@ -125,7 +131,7 @@ export default function HomePage() {
               поиска, подготовиться к интервью и спокойно пройти путь до оффера.
             </p>
             <div>
-              <ButtonLink href={site.calendly}>Записаться на консультацию</ButtonLink>
+              <ConsultationButton>Записаться на консультацию</ConsultationButton>
             </div>
           </div>
         </Container>

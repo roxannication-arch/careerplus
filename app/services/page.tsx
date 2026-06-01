@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { ButtonLink } from "@/components/ButtonLink";
+import { ConsultationButton } from "@/components/ConsultationQuiz";
 import { Container } from "@/components/Container";
 import { SectionHeader } from "@/components/SectionHeader";
-import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "CareerPlus DFY",
@@ -45,7 +45,7 @@ export default function ServicesPage() {
               профиля до интервью и переговоров.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <ButtonLink href={site.calendly}>Записаться на консультацию</ButtonLink>
+              <ConsultationButton>Записаться на консультацию</ConsultationButton>
               <ButtonLink href="/courses" variant="secondary">
                 Сначала посмотреть курсы
               </ButtonLink>
@@ -101,9 +101,9 @@ export default function ServicesPage() {
             <p className="mt-5 max-w-2xl text-base leading-7 text-muted">
               На консультации определим рынок, формат поддержки и следующий шаг без давления и универсальных обещаний.
             </p>
-            <ButtonLink href={site.calendly} className="mt-8">
+            <ConsultationButton className="mt-8">
               Записаться на консультацию
-            </ButtonLink>
+            </ConsultationButton>
           </div>
         </Container>
       </section>

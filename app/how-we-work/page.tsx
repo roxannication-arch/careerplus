@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { ButtonLink } from "@/components/ButtonLink";
+import { ConsultationButton } from "@/components/ConsultationQuiz";
 import { Container } from "@/components/Container";
 import { SectionHeader } from "@/components/SectionHeader";
-import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Как работаем",
@@ -80,7 +79,7 @@ export default function HowWeWorkPage() {
               качественные касания и подготовка к каждому разговору.
             </p>
             <div>
-              <ButtonLink href={site.calendly}>Обсудить мой маршрут</ButtonLink>
+              <ConsultationButton>Обсудить мой маршрут</ConsultationButton>
             </div>
           </div>
         </Container>
