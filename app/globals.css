@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0a0e27;
+  --color-secondary: #0d1226;
+  --color-accent: #6c63ff;
+  --color-accent-hover: #8b82ff;
+  --color-muted: #a0a4b8;
+  --color-border: #1f2438;
+  --font-sans: var(--font-inter), Inter, sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+  background: #0a0e27;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 70% 0%, rgba(108, 99, 255, 0.16), transparent 32rem),
+    #0a0e27;
+  color: #ffffff;
+  font-family: var(--font-inter), Inter, sans-serif;
+}
+
+::selection {
+  background: rgba(108, 99, 255, 0.55);
+  color: #ffffff;
+}
+
+.hero-surface {
+  background:
+    radial-gradient(ellipse 70% 55% at 72% 30%, rgba(108, 99, 255, 0.2), transparent 68%),
+    radial-gradient(ellipse 45% 45% at 8% 82%, rgba(108, 99, 255, 0.12), transparent 65%);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
