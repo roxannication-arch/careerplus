@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import type { ReactNode } from "react";
 import "./globals.css";
-import { SiteChrome } from "@/components/SiteChrome";
+import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
+import { ConsultationQuiz } from "@/components/ConsultationQuiz";
 import { site } from "@/lib/site";
 
 const inter = Inter({
@@ -63,7 +65,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="ru" className={inter.variable}>
       <body>
-        <SiteChrome>{children}</SiteChrome>
+        <Header />
+        <main>{children}</main>
+        <Footer />
+        <ConsultationQuiz />
       </body>
     </html>
   );
