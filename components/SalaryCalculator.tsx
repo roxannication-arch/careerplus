@@ -96,14 +96,14 @@ export function SalaryCalculator() {
   const alreadyLost = monthlySalary * months;
 
   return (
-    <section id="salary-calculator" className="border-y border-border bg-secondary/40 py-20">
+    <section id="salary-calculator" className="border-y border-ink/20 bg-soft/70 py-20">
       <div className="mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div>
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-accent-hover">
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-accent">
               Калькулятор зарплаты
             </p>
-            <h2 className="text-3xl font-semibold tracking-tight text-white md:text-5xl">
+            <h2 className="text-3xl font-semibold tracking-tight text-ink md:text-5xl">
               Сколько вы должны зарабатывать на самом деле?
             </h2>
             <p className="mt-5 text-base leading-7 text-muted">
@@ -112,20 +112,20 @@ export function SalaryCalculator() {
             </p>
           </div>
 
-          <div className="rounded-[2rem] border border-border bg-secondary p-6 md:p-8">
+          <div className="rounded-[2rem] border border-ink/20 bg-white p-6 md:p-8">
             <div className="grid gap-5">
-              <label className="grid gap-2 text-sm font-medium text-white">
+              <label className="grid gap-2 text-sm font-medium text-ink">
                 Ваша должность
                 <input
                   value={profession}
                   onChange={(event) => setProfession(event.target.value)}
-                  className="rounded-2xl border border-border bg-primary px-4 py-3 text-sm text-white outline-none transition-colors placeholder:text-muted focus:border-accent"
+                  className="rounded-2xl border border-ink/20 bg-page px-4 py-3 text-sm text-ink outline-none transition-colors placeholder:text-muted focus:border-accent"
                   placeholder="например: Product Manager, Developer, Marketing Lead"
                 />
               </label>
 
               <div>
-                <p className="text-sm font-medium text-white">Целевой рынок</p>
+                <p className="text-sm font-medium text-ink">Целевой рынок</p>
                 <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
                   {(Object.keys(marketLabels) as Market[]).map((item) => (
                     <button
@@ -135,7 +135,7 @@ export function SalaryCalculator() {
                       className={`rounded-full border px-4 py-2 text-sm font-semibold transition-colors ${
                         market === item
                           ? "border-accent bg-accent text-white"
-                          : "border-border bg-primary text-muted hover:text-white"
+                          : "border-ink/20 bg-page text-muted hover:text-ink"
                       }`}
                     >
                       {marketLabels[item]}
@@ -208,13 +208,13 @@ export function SalaryCalculator() {
                       detail={`${months} мес. поиска × ваша месячная зарплата`}
                     />
                   ) : null}
-                  <p className="rounded-2xl border border-border bg-primary/60 p-4 text-sm leading-6 text-muted">
+                  <p className="rounded-2xl border border-ink/20 bg-soft/80 p-4 text-sm leading-6 text-muted">
                     {result.insight}
                   </p>
                   <ConsultationButton className="w-full">Выйти на рыночный уровень →</ConsultationButton>
                 </div>
               ) : (
-                <div className="rounded-2xl border border-border bg-primary/60 p-6 text-center text-sm text-muted">
+                <div className="rounded-2xl border border-ink/20 bg-soft/80 p-6 text-center text-sm text-muted">
                   Заполните данные — покажем вашу рыночную ставку
                 </div>
               )}
@@ -244,10 +244,10 @@ function Range({
   onChange: (value: number) => void;
 }) {
   return (
-    <label className="grid gap-3 text-sm font-medium text-white">
+    <label className="grid gap-3 text-sm font-medium text-ink">
       <span className="flex items-center justify-between gap-4">
         {label}
-        <span className="text-accent-hover">{display}</span>
+        <span className="text-accent">{display}</span>
       </span>
       <input
         type="range"
@@ -264,9 +264,9 @@ function Range({
 
 function ResultCard({ label, value, detail }: { label: string; value: string; detail: string }) {
   return (
-    <div className="rounded-2xl border border-border bg-primary/60 p-5">
+    <div className="rounded-2xl border border-ink/20 bg-soft/80 p-5">
       <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted">{label}</p>
-      <div className="mt-2 text-3xl font-semibold tracking-tight text-white">{value}</div>
+      <div className="mt-2 text-3xl font-semibold tracking-tight text-ink">{value}</div>
       <p className="mt-2 text-sm leading-6 text-muted">{detail}</p>
     </div>
   );

@@ -43,20 +43,27 @@ const metrics = [
 export default function HomePage() {
   return (
     <>
-      <section className="hero-surface">
-        <Container className="grid min-h-[calc(100vh-8rem)] items-center gap-12 py-20 lg:grid-cols-[1.05fr_0.95fr] lg:py-28">
+      <section className="hero-surface border-b border-ink/15">
+        <Container className="grid min-h-[calc(100vh-8rem)] items-center gap-10 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:py-24">
           <div>
-            <p className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-accent-hover">
+            <div className="mb-7 flex flex-wrap gap-3">
+              {["US / UK / EU", "remote", "digital specialists"].map((chip) => (
+                <span key={chip} className="rounded-full border border-ink/15 bg-white px-4 py-2 text-xs font-bold uppercase tracking-wide text-ink/70">
+                  {chip}
+                </span>
+              ))}
+            </div>
+            <p className="mb-5 text-xs font-bold uppercase tracking-[0.24em] text-accent">
               Career consulting for global roles
             </p>
-            <h1 className="text-balance text-4xl font-bold leading-tight tracking-tight text-white md:text-6xl">
+            <h1 className="text-balance text-5xl font-extrabold uppercase leading-[0.95] tracking-tight text-accent md:text-7xl">
               Работа за рубежом для профессионалов
             </h1>
-            <p className="mt-6 max-w-2xl text-base leading-8 text-muted md:text-lg">
+            <p className="mt-6 max-w-2xl text-base font-medium leading-8 text-ink/70 md:text-lg">
               Помогаем русскоязычным специалистам выходить на международный рынок труда — под ключ или через
               структурированные курсы.
             </p>
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <ButtonLink href="/services">Под ключ → CareerPlus</ButtonLink>
               <ButtonLink href="/courses" variant="secondary">
                 Курсы для самостоятельного поиска
@@ -66,17 +73,19 @@ export default function HomePage() {
               </ButtonLink>
             </div>
           </div>
-          <div className="rounded-[2rem] border border-border bg-secondary/70 p-6">
-            <div className="grid gap-4">
-              {["Strategy", "Profile", "Search", "Interview", "Offer"].map((item, index) => (
-                <div key={item} className="flex items-center gap-4 rounded-2xl border border-border bg-primary/70 p-4">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-accent text-sm font-semibold text-white">
-                    {index + 1}
-                  </span>
-                  <div>
-                    <p className="text-sm font-semibold text-white">{item}</p>
-                    <p className="text-xs text-muted">Системный шаг к международному рынку</p>
-                  </div>
+          <div className="brand-panel rounded-[2rem] p-7 md:p-9">
+            <div className="mb-8 flex justify-end">
+              <span className="rounded-full bg-white px-6 py-2 text-xs font-extrabold uppercase tracking-wide text-ink">только онлайн</span>
+            </div>
+            <p className="text-sm font-bold uppercase tracking-[0.18em] text-white/80">CareerPlus маршрут</p>
+            <h2 className="mt-4 text-3xl font-extrabold uppercase leading-tight tracking-tight text-white md:text-5xl">
+              От профиля до оффера — по системе
+            </h2>
+            <div className="mt-9 grid gap-3">
+              {["Стратегия рынка", "Резюме и LinkedIn", "Точечный outreach", "Интервью и оффер"].map((item, index) => (
+                <div key={item} className="flex items-center justify-between rounded-full border border-white/35 px-5 py-3 text-sm font-bold text-white">
+                  <span>{item}</span>
+                  <span>{String(index + 1).padStart(2, "0")}</span>
                 </div>
               ))}
             </div>
@@ -93,9 +102,9 @@ export default function HomePage() {
           />
           <div className="mt-10 grid gap-5 lg:grid-cols-2">
             {paths.map((path) => (
-              <article key={path.title} className="rounded-2xl border border-border bg-secondary p-8">
-                <p className="text-sm font-semibold text-accent-hover">{path.price}</p>
-                <h2 className="mt-4 text-2xl font-semibold tracking-tight text-white">{path.title}</h2>
+              <article key={path.title} className="rounded-[1.75rem] border border-ink/20 bg-white p-8">
+                <p className="text-sm font-semibold text-accent">{path.price}</p>
+                <h2 className="mt-4 text-2xl font-semibold tracking-tight text-ink">{path.title}</h2>
                 <p className="mt-4 text-base leading-7 text-muted">{path.description}</p>
                 <ButtonLink href={path.href} className="mt-8">
                   {path.cta}
@@ -106,7 +115,7 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <section className="border-y border-border bg-secondary/40 py-16">
+      <section className="border-y border-ink/15 bg-soft/70 py-16">
         <Container>
           <div className="grid gap-4 md:grid-cols-3">
             {metrics.map((metric) => (

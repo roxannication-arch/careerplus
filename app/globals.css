@@ -1,18 +1,21 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #0a0e27;
-  --color-secondary: #0d1226;
-  --color-accent: #6c63ff;
-  --color-accent-hover: #8b82ff;
-  --color-muted: #a0a4b8;
-  --color-border: #1f2438;
+  --color-page: #fbfaf7;
+  --color-primary: #fbfaf7;
+  --color-secondary: #ffffff;
+  --color-accent: #e52f45;
+  --color-accent-hover: #c91f35;
+  --color-muted: #5f626b;
+  --color-border: #d8d2c8;
+  --color-ink: #171717;
+  --color-soft: #efede8;
   --font-sans: var(--font-inter), Inter, sans-serif;
 }
 
 :root {
-  color-scheme: dark;
-  background: #0a0e27;
+  color-scheme: light;
+  background: #fbfaf7;
 }
 
 * {
@@ -26,21 +29,44 @@ html {
 body {
   min-height: 100vh;
   background:
-    radial-gradient(circle at 70% 0%, rgba(108, 99, 255, 0.16), transparent 32rem),
-    #0a0e27;
-  color: #ffffff;
+    linear-gradient(rgba(23, 23, 23, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 23, 23, 0.035) 1px, transparent 1px),
+    #fbfaf7;
+  background-size: 64px 64px;
+  color: #171717;
   font-family: var(--font-inter), Inter, sans-serif;
 }
 
 ::selection {
-  background: rgba(108, 99, 255, 0.55);
-  color: #ffffff;
+  background: rgba(229, 47, 69, 0.22);
+  color: #171717;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+input,
+textarea,
+select {
+  color-scheme: light;
 }
 
 .hero-surface {
   background:
-    radial-gradient(ellipse 70% 55% at 72% 30%, rgba(108, 99, 255, 0.2), transparent 68%),
-    radial-gradient(ellipse 45% 45% at 8% 82%, rgba(108, 99, 255, 0.12), transparent 65%);
+    radial-gradient(circle at 78% 16%, rgba(229, 47, 69, 0.13), transparent 26rem),
+    linear-gradient(135deg, #ffffff 0%, #fbfaf7 54%, #efede8 100%);
+}
+
+.reference-card {
+  border: 1px solid #171717;
+  background: #ffffff;
+}
+
+.brand-panel {
+  background: #b30f24;
+  color: #ffffff;
 }
 
 .text-balance {

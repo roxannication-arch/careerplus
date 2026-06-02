@@ -17,8 +17,8 @@ export function PricingCard({
 }) {
   return (
     <article
-      className={`flex h-full flex-col rounded-2xl border bg-secondary p-8 ${
-        featured ? "border-accent" : "border-border"
+      className={`flex h-full flex-col rounded-[1.75rem] border bg-white p-8 ${
+        featured ? "border-accent" : "border-ink/20"
       }`}
     >
       {featured ? (
@@ -26,8 +26,8 @@ export function PricingCard({
           Оптимальный старт
         </div>
       ) : null}
-      <h3 className="text-2xl font-semibold tracking-tight text-white">{name}</h3>
-      <div className="mt-4 text-4xl font-bold tracking-tight text-white">{price}</div>
+      <h3 className="text-2xl font-extrabold uppercase leading-tight tracking-tight text-ink">{name}</h3>
+      <div className="mt-4 text-5xl font-extrabold tracking-tight text-ink">{price}</div>
       <ul className="mt-6 grid flex-1 gap-3 text-sm text-muted">
         {features.map((feature) => (
           <li key={feature} className="flex gap-3">

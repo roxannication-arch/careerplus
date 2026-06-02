@@ -82,14 +82,14 @@ const faq = [
 export default function WorkAbroadCoursePage() {
   return (
     <>
-      <section className="hero-surface py-20 md:py-28">
+      <section className="hero-surface border-b border-ink/15 py-20 md:py-28">
         <Container className="grid gap-10 lg:grid-cols-[1fr_0.8fr] lg:items-center">
           <div>
-            <p className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-accent-hover">Курс</p>
-            <h1 className="text-balance text-4xl font-bold leading-tight tracking-tight text-white md:text-6xl">
+            <p className="mb-5 text-xs font-bold uppercase tracking-[0.24em] text-accent">Курс</p>
+            <h1 className="text-balance text-5xl font-extrabold uppercase leading-[0.95] tracking-tight text-accent md:text-7xl">
               Работа за рубежом для digital-специалистов
             </h1>
-            <p className="mt-6 text-2xl font-semibold leading-8 text-white">
+            <p className="mt-6 text-2xl font-semibold leading-8 text-ink">
               Найди удалённую работу на зарубежную компанию, не уезжая из своего города.
             </p>
             <p className="mt-5 text-base leading-7 text-muted">
@@ -99,11 +99,11 @@ export default function WorkAbroadCoursePage() {
               Купить за $79
             </ButtonLink>
           </div>
-          <div className="rounded-[2rem] border border-border bg-secondary p-8">
-            <p className="text-sm font-semibold text-accent-hover">Что внутри</p>
+          <div className="rounded-[2rem] border border-ink/20 bg-white p-8">
+            <p className="text-sm font-semibold text-accent">Что внутри</p>
             <div className="mt-6 grid gap-4">
               {["Рынок", "Профиль", "Поиск", "Интервью", "Оффер"].map((item) => (
-                <div key={item} className="rounded-2xl border border-border bg-primary/60 p-4 text-sm text-white">
+                <div key={item} className="rounded-2xl border border-ink/20 bg-soft/80 p-4 text-sm text-ink">
                   {item}
                 </div>
               ))}
@@ -121,7 +121,7 @@ export default function WorkAbroadCoursePage() {
           />
           <div className="mt-8 flex flex-wrap gap-3">
             {professions.map((profession) => (
-              <span key={profession} className="rounded-full border border-border bg-secondary px-4 py-2 text-sm text-white">
+              <span key={profession} className="rounded-full border border-ink/20 bg-white px-4 py-2 text-sm text-ink">
                 {profession}
               </span>
             ))}
@@ -129,12 +129,12 @@ export default function WorkAbroadCoursePage() {
         </Container>
       </section>
 
-      <section className="border-y border-border bg-secondary/40 py-20">
+      <section className="border-y border-ink/15 bg-soft/70 py-20">
         <Container className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
           <SectionHeader eyebrow="Честно" title="Что я НЕ обещаю" />
           <div className="grid gap-4 sm:grid-cols-2">
             {honestPoints.map((point) => (
-              <div key={point} className="rounded-2xl border border-border bg-secondary p-6 text-sm leading-6 text-muted">
+              <div key={point} className="rounded-2xl border border-ink/20 bg-white p-6 text-sm leading-6 text-muted">
                 {point}
               </div>
             ))}
@@ -151,13 +151,13 @@ export default function WorkAbroadCoursePage() {
           />
           <div className="mt-10 grid gap-4">
             {workAbroadLessons.map((lesson, index) => (
-              <article key={lesson.title} className="rounded-2xl border border-border bg-secondary p-6">
+              <article key={lesson.title} className="rounded-2xl border border-ink/20 bg-white p-6">
                 <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
                   <div>
-                    <p className="text-sm font-semibold text-accent-hover">
+                    <p className="text-sm font-semibold text-accent">
                       Урок {index + 1} · {lesson.duration}
                     </p>
-                    <h3 className="mt-3 text-2xl font-semibold tracking-tight text-white">{lesson.title}</h3>
+                    <h3 className="mt-3 text-2xl font-semibold tracking-tight text-ink">{lesson.title}</h3>
                     <p className="mt-4 text-sm leading-7 text-muted">{lesson.body}</p>
                   </div>
                 </div>
@@ -167,12 +167,12 @@ export default function WorkAbroadCoursePage() {
         </Container>
       </section>
 
-      <section className="border-y border-border bg-secondary/40 py-20">
+      <section className="border-y border-ink/15 bg-soft/70 py-20">
         <Container className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
           <SectionHeader eyebrow="Bonus pack" title="Материалы, которые экономят часы подготовки" />
           <div className="grid gap-4 sm:grid-cols-2">
             {bonuses.map((bonus) => (
-              <div key={bonus} className="rounded-2xl border border-border bg-secondary p-6 text-sm text-white">
+              <div key={bonus} className="rounded-2xl border border-ink/20 bg-white p-6 text-sm text-ink">
                 {bonus}
               </div>
             ))}
@@ -195,26 +195,26 @@ export default function WorkAbroadCoursePage() {
         </Container>
       </section>
 
-      <section className="border-y border-border bg-secondary/40 py-20">
+      <section className="border-y border-ink/15 bg-soft/70 py-20">
         <Container>
           <SectionHeader eyebrow="Больше поддержки" title="Хочешь больше сопровождения?" />
           <div className="mt-10 grid gap-5 lg:grid-cols-3">
-            <div className="rounded-2xl border border-border bg-secondary p-8">
-              <h3 className="text-xl font-semibold text-white">Целишься в США/UK</h3>
+            <div className="rounded-2xl border border-ink/20 bg-white p-8">
+              <h3 className="text-xl font-semibold text-ink">Целишься в США/UK</h3>
               <p className="mt-4 text-sm leading-6 text-muted">Выбирай CareerPlus под ключ с командным сопровождением.</p>
               <ButtonLink href="/services" className="mt-7">
                 CareerPlus под ключ
               </ButtonLink>
             </div>
-            <div className="rounded-2xl border border-border bg-secondary p-8">
-              <h3 className="text-xl font-semibold text-white">Нужна другая страна</h3>
+            <div className="rounded-2xl border border-ink/20 bg-white p-8">
+              <h3 className="text-xl font-semibold text-ink">Нужна другая страна</h3>
               <p className="mt-4 text-sm leading-6 text-muted">Оставь заявку, чтобы обсудить индивидуальный маршрут.</p>
               <ButtonLink href="/contact" variant="secondary" className="mt-7">
                 Оставить заявку
               </ButtonLink>
             </div>
-            <div className="rounded-2xl border border-border bg-secondary p-8">
-              <h3 className="text-xl font-semibold text-white">Хочешь с группой</h3>
+            <div className="rounded-2xl border border-ink/20 bg-white p-8">
+              <h3 className="text-xl font-semibold text-ink">Хочешь с группой</h3>
               <p className="mt-4 text-sm leading-6 text-muted">Присоединись к листу ожидания будущего комьюнити.</p>
               <ButtonLink href="/contact" variant="secondary" className="mt-7">
                 В лист ожидания
@@ -227,7 +227,7 @@ export default function WorkAbroadCoursePage() {
       <section className="py-20">
         <Container className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
           <SectionHeader eyebrow="Автор" title="Роксана, основатель CareerPlus" />
-          <div className="rounded-2xl border border-border bg-secondary p-8 text-base leading-8 text-muted">
+          <div className="rounded-2xl border border-ink/20 bg-white p-8 text-base leading-8 text-muted">
             <p>
               Роксана — основатель CareerPlus, с опытом в US immigration paralegal и corporate Global Mobility.
               Она сама из российского города и работает на международный рынок, поэтому строит курс вокруг практичных,
@@ -237,7 +237,7 @@ export default function WorkAbroadCoursePage() {
         </Container>
       </section>
 
-      <section className="border-y border-border bg-secondary/40 py-20">
+      <section className="border-y border-ink/15 bg-soft/70 py-20">
         <Container>
           <SectionHeader eyebrow="FAQ" title="Частые вопросы" />
           <div className="mt-10">
@@ -248,8 +248,8 @@ export default function WorkAbroadCoursePage() {
 
       <section className="py-20">
         <Container>
-          <div className="rounded-[2rem] border border-border bg-secondary p-8 md:p-12">
-            <h2 className="text-balance text-3xl font-semibold tracking-tight text-white md:text-5xl">
+          <div className="rounded-[2rem] border border-ink/20 bg-white p-8 md:p-12">
+            <h2 className="text-balance text-3xl font-semibold tracking-tight text-ink md:text-5xl">
               Перестань искать только там, где живёшь
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-7 text-muted">

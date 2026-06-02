@@ -11,7 +11,7 @@ const socials = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-primary py-12">
+    <footer className="border-t border-ink/20 bg-page py-12">
       <Container>
         <div className="grid gap-10 md:grid-cols-[1.2fr_1fr_1fr]">
           <div>
@@ -22,33 +22,33 @@ export function Footer() {
             </p>
           </div>
           <div>
-            <h3 className="text-sm font-semibold text-white">Навигация</h3>
+            <h3 className="text-sm font-semibold text-ink">Навигация</h3>
             <div className="mt-4 grid gap-3">
               {navItems.map((item) => (
-                <Link key={item.href} href={item.href} className="text-sm text-muted transition-colors hover:text-white">
+                <Link key={item.href} href={item.href} className="text-sm text-muted transition-colors hover:text-ink">
                   {item.label}
                 </Link>
               ))}
-              <Link href="/contact" className="text-sm text-muted transition-colors hover:text-white">
+              <Link href="/contact" className="text-sm text-muted transition-colors hover:text-ink">
                 Контакты
               </Link>
             </div>
           </div>
           <div>
-            <h3 className="text-sm font-semibold text-white">Контакты</h3>
+            <h3 className="text-sm font-semibold text-ink">Контакты</h3>
             <div className="mt-4 grid gap-3">
-              <a href={`mailto:${site.email}`} className="text-sm text-muted transition-colors hover:text-white">
+              <a href={`mailto:${site.email}`} className="text-sm text-muted transition-colors hover:text-ink">
                 {site.email}
               </a>
               {socials.map((item) => (
-                <a key={item.label} href={item.href} className="text-sm text-muted transition-colors hover:text-white">
+                <a key={item.label} href={item.href} className="text-sm text-muted transition-colors hover:text-ink">
                   {item.label}
                 </a>
               ))}
             </div>
           </div>
         </div>
-        <div className="mt-10 border-t border-border pt-6 text-xs text-muted">
+        <div className="mt-10 border-t border-ink/20 pt-6 text-xs text-muted">
           © {new Date().getFullYear()} CareerPlus. Все права защищены.
         </div>
       </Container>

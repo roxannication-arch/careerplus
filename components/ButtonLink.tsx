@@ -10,8 +10,8 @@ type ButtonLinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
 
 const variants = {
   primary: "border-accent bg-accent text-white hover:border-accent-hover hover:bg-accent-hover",
-  secondary: "border-border bg-secondary text-white hover:border-accent hover:text-white",
-  ghost: "border-border bg-transparent text-white hover:border-accent hover:text-white"
+  secondary: "border-ink/20 bg-white text-ink hover:border-accent hover:text-ink",
+  ghost: "border-ink/20 bg-transparent text-ink hover:border-accent hover:text-ink"
 };
 
 export function ButtonLink({

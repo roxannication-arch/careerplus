@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function CoursesPage() {
   return (
-    <section className="hero-surface py-20 md:py-28">
+    <section className="hero-surface border-b border-ink/15 py-20 md:py-28">
       <Container>
         <SectionHeader
           eyebrow="Обучение"

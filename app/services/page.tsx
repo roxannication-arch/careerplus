@@ -31,13 +31,13 @@ const bestFor = [
 export default function ServicesPage() {
   return (
     <>
-      <section className="hero-surface py-20 md:py-28">
+      <section className="hero-surface border-b border-ink/15 py-20 md:py-28">
         <Container className="grid gap-10 lg:grid-cols-[1fr_0.8fr] lg:items-center">
           <div>
-            <p className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-accent-hover">
+            <p className="mb-5 text-xs font-bold uppercase tracking-[0.24em] text-accent">
               CareerPlus DFY
             </p>
-            <h1 className="text-balance text-4xl font-bold leading-tight tracking-tight text-white md:text-6xl">
+            <h1 className="text-balance text-5xl font-extrabold uppercase leading-[0.95] tracking-tight text-accent md:text-7xl">
               Премиальное сопровождение под ключ
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-8 text-muted md:text-lg">
@@ -51,9 +51,9 @@ export default function ServicesPage() {
               </ButtonLink>
             </div>
           </div>
-          <div className="rounded-[2rem] border border-accent bg-secondary p-8">
+          <div className="rounded-[2rem] border border-accent bg-white p-8">
             <p className="text-sm text-muted">Инвестиция</p>
-            <div className="mt-3 text-5xl font-bold tracking-tight text-white">$2 500+</div>
+            <div className="mt-3 text-5xl font-bold tracking-tight text-ink">$2 500+</div>
             <p className="mt-5 text-sm leading-6 text-muted">
               Финальный формат и объём работы определяются после диагностики профиля и цели.
             </p>
@@ -70,21 +70,21 @@ export default function ServicesPage() {
           />
           <div className="grid gap-4">
             {included.map((item, index) => (
-              <div key={item} className="rounded-2xl border border-border bg-secondary p-6">
-                <p className="text-sm font-semibold text-accent-hover">0{index + 1}</p>
-                <p className="mt-3 text-base leading-7 text-white">{item}</p>
+              <div key={item} className="rounded-2xl border border-ink/20 bg-white p-6">
+                <p className="text-sm font-semibold text-accent">0{index + 1}</p>
+                <p className="mt-3 text-base leading-7 text-ink">{item}</p>
               </div>
             ))}
           </div>
         </Container>
       </section>
 
-      <section className="border-y border-border bg-secondary/40 py-20">
+      <section className="border-y border-ink/15 bg-soft/70 py-20">
         <Container>
           <SectionHeader eyebrow="Кому подходит" title="Когда формат под ключ оправдан" />
           <div className="mt-10 grid gap-5 md:grid-cols-2">
             {bestFor.map((item) => (
-              <div key={item} className="rounded-2xl border border-border bg-secondary p-6 text-sm leading-6 text-muted">
+              <div key={item} className="rounded-2xl border border-ink/20 bg-white p-6 text-sm leading-6 text-muted">
                 {item}
               </div>
             ))}
@@ -94,8 +94,8 @@ export default function ServicesPage() {
 
       <section className="py-20">
         <Container>
-          <div className="rounded-[2rem] border border-border bg-secondary p-8 md:p-12">
-            <h2 className="text-3xl font-semibold tracking-tight text-white md:text-5xl">
+          <div className="rounded-[2rem] border border-ink/20 bg-white p-8 md:p-12">
+            <h2 className="text-3xl font-semibold tracking-tight text-ink md:text-5xl">
               Обсудим вашу цель и реалистичный маршрут
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-7 text-muted">

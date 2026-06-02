@@ -42,7 +42,7 @@ const steps = [
 export default function HowWeWorkPage() {
   return (
     <>
-      <section className="hero-surface py-20 md:py-28">
+      <section className="hero-surface border-b border-ink/15 py-20 md:py-28">
         <Container>
           <SectionHeader
             eyebrow="Процесс"
@@ -56,9 +56,9 @@ export default function HowWeWorkPage() {
         <Container>
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {steps.map((step, index) => (
-              <article key={step.title} className="rounded-2xl border border-border bg-secondary p-8">
-                <p className="text-sm font-semibold text-accent-hover">Этап {index + 1}</p>
-                <h2 className="mt-4 text-2xl font-semibold tracking-tight text-white">{step.title}</h2>
+              <article key={step.title} className="rounded-2xl border border-ink/20 bg-white p-8">
+                <p className="text-sm font-semibold text-accent">Этап {index + 1}</p>
+                <h2 className="mt-4 text-2xl font-semibold tracking-tight text-ink">{step.title}</h2>
                 <p className="mt-4 text-sm leading-7 text-muted">{step.body}</p>
               </article>
             ))}
@@ -66,7 +66,7 @@ export default function HowWeWorkPage() {
         </Container>
       </section>
 
-      <section className="border-y border-border bg-secondary/40 py-20">
+      <section className="border-y border-ink/15 bg-soft/70 py-20">
         <Container className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
           <SectionHeader eyebrow="Что важно" title="Без хаоса и массовых рассылок" />
           <div className="grid gap-5 text-base leading-8 text-muted">

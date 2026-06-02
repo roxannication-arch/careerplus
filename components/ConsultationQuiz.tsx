@@ -67,8 +67,8 @@ export function ConsultationButton({
 }) {
   const variants = {
     primary: "border-accent bg-accent text-white hover:border-accent-hover hover:bg-accent-hover",
-    secondary: "border-border bg-secondary text-white hover:border-accent hover:text-white",
-    ghost: "border-border bg-transparent text-white hover:border-accent hover:text-white"
+    secondary: "border-ink/20 bg-white text-ink hover:border-accent hover:text-ink",
+    ghost: "border-ink/20 bg-transparent text-ink hover:border-accent hover:text-ink"
   };
 
   return (
@@ -155,7 +155,7 @@ export function ConsultationQuiz() {
 
   return (
     <div
-      className="fixed inset-0 z-[100] flex items-center justify-center bg-primary/80 px-4 py-6 backdrop-blur-xl"
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-page/80 px-4 py-6 backdrop-blur-xl"
       role="dialog"
       aria-modal="true"
       aria-label="Квиз перед консультацией"
@@ -165,27 +165,27 @@ export function ConsultationQuiz() {
         }
       }}
     >
-      <div className="max-h-[92vh] w-full max-w-2xl overflow-y-auto rounded-[2rem] border border-border bg-secondary p-6 md:p-8">
+      <div className="max-h-[92vh] w-full max-w-2xl overflow-y-auto rounded-[2rem] border border-ink/20 bg-white p-6 md:p-8">
         <div className="flex items-start justify-between gap-6">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-accent-hover">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-accent">
               Квиз перед консультацией
             </p>
-            <h2 className="mt-3 text-2xl font-semibold tracking-tight text-white md:text-3xl">
+            <h2 className="mt-3 text-2xl font-semibold tracking-tight text-ink md:text-3xl">
               Поймём, какой формат вам подходит
             </h2>
           </div>
           <button
             type="button"
             onClick={close}
-            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-border text-xl text-muted transition-colors hover:text-white"
+            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-ink/20 text-xl text-muted transition-colors hover:text-ink"
             aria-label="Закрыть квиз"
           >
             ×
           </button>
         </div>
 
-        <div className="mt-6 h-1.5 rounded-full bg-primary">
+        <div className="mt-6 h-1.5 rounded-full bg-page">
           <div className="h-full rounded-full bg-accent transition-all" style={{ width: `${progress}%` }} />
         </div>
 
@@ -201,7 +201,7 @@ export function ConsultationQuiz() {
           <button
             type="button"
             onClick={back}
-            className="text-sm font-medium text-muted transition-colors hover:text-white"
+            className="text-sm font-medium text-muted transition-colors hover:text-ink"
           >
             Назад
           </button>
@@ -224,16 +224,16 @@ function QuizStep({
   if (step === 0) {
     return (
       <div>
-        <h3 className="text-xl font-semibold text-white">На какой рынок вы смотрите?</h3>
+        <h3 className="text-xl font-semibold text-ink">На какой рынок вы смотрите?</h3>
         <div className="mt-5 grid gap-3 sm:grid-cols-2">
           {markets.map((market) => (
             <button
               key={market.value}
               type="button"
               onClick={() => answer("market", market.value)}
-              className="rounded-2xl border border-border bg-primary/60 p-5 text-left transition-colors hover:border-accent"
+              className="rounded-2xl border border-ink/20 bg-soft/80 p-5 text-left transition-colors hover:border-accent"
             >
-              <span className="text-base font-semibold text-white">{market.label}</span>
+              <span className="text-base font-semibold text-ink">{market.label}</span>
               <span className="mt-2 block text-sm leading-6 text-muted">{market.hint}</span>
             </button>
           ))}
@@ -332,14 +332,14 @@ function ChoiceStep({
 }) {
   return (
     <div>
-      <h3 className="text-xl font-semibold text-white">{title}</h3>
+      <h3 className="text-xl font-semibold text-ink">{title}</h3>
       <div className="mt-5 grid gap-3">
         {options.map(([value, label]) => (
           <button
             key={value}
             type="button"
             onClick={() => onSelect(value)}
-            className="rounded-2xl border border-border bg-primary/60 p-5 text-left text-sm font-medium text-white transition-colors hover:border-accent"
+            className="rounded-2xl border border-ink/20 bg-soft/80 p-5 text-left text-sm font-medium text-ink transition-colors hover:border-accent"
           >
             {label}
           </button>
@@ -359,11 +359,11 @@ function TextStep({ title, onSubmit }: { title: string; onSubmit: (value: string
         onSubmit(value.trim() || "Не указано");
       }}
     >
-      <h3 className="text-xl font-semibold text-white">{title}</h3>
+      <h3 className="text-xl font-semibold text-ink">{title}</h3>
       <input
         value={value}
         onChange={(event) => setValue(event.target.value)}
-        className="mt-5 w-full rounded-2xl border border-border bg-primary px-4 py-3 text-sm text-white outline-none transition-colors placeholder:text-muted focus:border-accent"
+        className="mt-5 w-full rounded-2xl border border-ink/20 bg-page px-4 py-3 text-sm text-ink outline-none transition-colors placeholder:text-muted focus:border-accent"
         placeholder="Например: Product Manager, Developer, Marketing Lead"
       />
       <button
@@ -381,7 +381,7 @@ function QuizResult({ result, close }: { result: Result; close: () => void }) {
     return (
       <div>
         <div className="text-4xl">✓</div>
-        <h3 className="mt-4 text-2xl font-semibold text-white">Похоже, вам подходит консультация.</h3>
+        <h3 className="mt-4 text-2xl font-semibold text-ink">Похоже, вам подходит консультация.</h3>
         <p className="mt-4 text-sm leading-7 text-muted">
           На звонке разберём профиль, рынок и реалистичный маршрут. Запись идёт через Calendly.
         </p>
@@ -402,7 +402,7 @@ function QuizResult({ result, close }: { result: Result; close: () => void }) {
     return (
       <div>
         <div className="text-4xl">→</div>
-        <h3 className="mt-4 text-2xl font-semibold text-white">Сначала лучше усилить подготовку.</h3>
+        <h3 className="mt-4 text-2xl font-semibold text-ink">Сначала лучше усилить подготовку.</h3>
         <p className="mt-4 text-sm leading-7 text-muted">
           Для международного рынка нужен рабочий английский. Курс поможет понять воронку и подготовить материалы,
           а затем можно вернуться к консультации.
@@ -421,7 +421,7 @@ function QuizResult({ result, close }: { result: Result; close: () => void }) {
   return (
     <div>
       <div className="text-4xl">↗</div>
-      <h3 className="mt-4 text-2xl font-semibold text-white">Можно начать с диагностики.</h3>
+      <h3 className="mt-4 text-2xl font-semibold text-ink">Можно начать с диагностики.</h3>
       <p className="mt-4 text-sm leading-7 text-muted">
         Если вы пока выбираете рынок или срок, консультация поможет понять, что реалистично и какой формат поддержки
         нужен.
