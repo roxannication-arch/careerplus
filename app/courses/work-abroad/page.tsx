@@ -86,7 +86,7 @@ export default function WorkAbroadCoursePage() {
         <Container className="grid gap-10 lg:grid-cols-[1fr_0.8fr] lg:items-center">
           <div>
             <p className="mb-5 text-xs font-bold uppercase tracking-[0.24em] text-accent">Курс</p>
-            <h1 className="text-balance text-5xl font-extrabold uppercase leading-[0.95] tracking-tight text-accent md:text-7xl">
+            <h1 className="text-balance text-5xl font-extrabold uppercase leading-[0.95] tracking-tight text-ink md:text-7xl">
               Работа за рубежом для digital-специалистов
             </h1>
             <p className="mt-6 text-2xl font-semibold leading-8 text-ink">

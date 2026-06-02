@@ -37,7 +37,7 @@ export default function ServicesPage() {
             <p className="mb-5 text-xs font-bold uppercase tracking-[0.24em] text-accent">
               CareerPlus DFY
             </p>
-            <h1 className="text-balance text-5xl font-extrabold uppercase leading-[0.95] tracking-tight text-accent md:text-7xl">
+            <h1 className="text-balance text-5xl font-extrabold uppercase leading-[0.95] tracking-tight text-ink md:text-7xl">
               Премиальное сопровождение под ключ
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-8 text-muted md:text-lg">

@@ -16,7 +16,7 @@ export default function EnglishPlaceholderPage() {
       <Container>
         <div className="max-w-2xl">
           <p className="mb-5 text-xs font-bold uppercase tracking-[0.24em] text-accent">EN</p>
-          <h1 className="text-5xl font-extrabold uppercase leading-[0.95] tracking-tight text-accent md:text-7xl">
+          <h1 className="text-5xl font-extrabold uppercase leading-[0.95] tracking-tight text-ink md:text-7xl">
             English version is coming soon
           </h1>
           <p className="mt-6 text-base leading-8 text-muted">

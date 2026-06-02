@@ -4,8 +4,8 @@
   --color-page: #fbfaf7;
   --color-primary: #fbfaf7;
   --color-secondary: #ffffff;
-  --color-accent: #e52f45;
-  --color-accent-hover: #c91f35;
+  --color-accent: #8f2f3d;
+  --color-accent-hover: #6f2430;
   --color-muted: #5f626b;
   --color-border: #d8d2c8;
   --color-ink: #171717;
@@ -38,7 +38,7 @@ body {
 }
 
 ::selection {
-  background: rgba(229, 47, 69, 0.22);
+  background: rgba(143, 47, 61, 0.18);
   color: #171717;
 }
 
@@ -55,7 +55,7 @@ select {
 
 .hero-surface {
   background:
-    radial-gradient(circle at 78% 16%, rgba(229, 47, 69, 0.13), transparent 26rem),
+    radial-gradient(circle at 78% 16%, rgba(143, 47, 61, 0.08), transparent 26rem),
     linear-gradient(135deg, #ffffff 0%, #fbfaf7 54%, #efede8 100%);
 }
 
@@ -65,7 +65,7 @@ select {
 }
 
 .brand-panel {
-  background: #b30f24;
+  background: #262321;
   color: #ffffff;
 }
 

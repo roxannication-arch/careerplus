@@ -56,7 +56,7 @@ export default function HomePage() {
             <p className="mb-5 text-xs font-bold uppercase tracking-[0.24em] text-accent">
               Career consulting for global roles
             </p>
-            <h1 className="text-balance text-5xl font-extrabold uppercase leading-[0.95] tracking-tight text-accent md:text-7xl">
+            <h1 className="text-balance text-5xl font-extrabold uppercase leading-[0.95] tracking-tight text-ink md:text-7xl">
               Работа за рубежом для профессионалов
             </h1>
             <p className="mt-6 max-w-2xl text-base font-medium leading-8 text-ink/70 md:text-lg">
@@ -73,13 +73,13 @@ export default function HomePage() {
               </ButtonLink>
             </div>
           </div>
-          <div className="brand-panel rounded-[2rem] p-7 md:p-9">
+          <div className="brand-panel rounded-[2rem] border border-ink/20 p-7 md:p-9">
             <div className="mb-8 flex justify-end">
               <span className="rounded-full bg-white px-6 py-2 text-xs font-extrabold uppercase tracking-wide text-ink">только онлайн</span>
             </div>
             <p className="text-sm font-bold uppercase tracking-[0.18em] text-white/80">CareerPlus маршрут</p>
             <h2 className="mt-4 text-3xl font-extrabold uppercase leading-tight tracking-tight text-white md:text-5xl">
-              От профиля до оффера — по системе
+              От профиля до оффера — спокойно и по системе
             </h2>
             <div className="mt-9 grid gap-3">
               {["Стратегия рынка", "Резюме и LinkedIn", "Точечный outreach", "Интервью и оффер"].map((item, index) => (
