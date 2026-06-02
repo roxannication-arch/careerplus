@@ -89,7 +89,7 @@ const lessons = [
     title: "Сдвиг рамки + честная воронка",
     duration: "10–15 мин",
     body:
-      "Почему ты не привязан к локальному рынку. Реальная воронка: 300–500 откликов ради оффера. Барьеры для РФ/СНГ и как учитывать их без серых схем."
+      "Почему ты не привязан к локальному рынку. Реальная воронка: 300–500 откликов ради оффера. Рыночные ограничения и как учитывать их без серых схем."
   },
   {
     title: "Выбрать рынок",
@@ -147,7 +147,7 @@ const faq = [
       "Да. Курс рассчитан на специалистов, которые уже работают в digital и хотят параллельно подготовить выход на международный рынок."
   },
   {
-    question: "Как происходит оплата из РФ/СНГ?",
+    question: "Как происходит оплата из разных стран?",
     answer:
       "Оплата идёт через Whop. Доступные способы зависят от платформы и вашей страны. Мы не даём схем обхода ограничений, только обзор легальных вариантов."
   },
@@ -393,7 +393,7 @@ export default function WorkAbroadCoursePage() {
           <div className="mt-10 grid gap-5 lg:grid-cols-3">
             <div className="rounded-[1.75rem] border border-ink/20 bg-white p-8">
               <h3 className="text-xl font-semibold text-ink">Целишься в США/UK</h3>
-              <p className="mt-4 text-sm leading-6 text-muted">CareerPlus под ключ. Команда ведёт тебя до оффера. От $3 500.</p>
+              <p className="mt-4 text-sm leading-6 text-muted">CareerPlus под ключ. Команда помогает выстроить процесс до переговоров. От $3 500.</p>
               <ButtonLink href="https://careerplus.us" className="mt-6">CareerPlus.us</ButtonLink>
             </div>
             <div className="rounded-[1.75rem] border border-ink/20 bg-white p-8">

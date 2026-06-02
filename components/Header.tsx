@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { ConsultationButton } from "./ConsultationQuiz";
+import { ButtonLink } from "./ButtonLink";
 import { Container } from "./Container";
 import { Logo } from "./Logo";
 import { localeLabels } from "@/lib/i18n";
-import { navItems } from "@/lib/site";
+import { navItems, site } from "@/lib/site";
 
 export function Header() {
   return (
@@ -28,9 +28,9 @@ export function Header() {
               {localeLabels.en}
             </Link>
           </div>
-          <ConsultationButton className="hidden px-5 py-2.5 sm:inline-flex">
+          <ButtonLink href={site.calendlyPaid} className="hidden px-5 py-2.5 sm:inline-flex">
             Записаться
-          </ConsultationButton>
+          </ButtonLink>
         </div>
       </Container>
       <Container className="flex gap-4 overflow-x-auto border-t border-ink/15 py-3 lg:hidden">
@@ -39,9 +39,9 @@ export function Header() {
             {item.label}
           </Link>
         ))}
-        <ConsultationButton className="shrink-0 px-4 py-2 text-sm">
+        <ButtonLink href={site.calendlyPaid} className="shrink-0 px-4 py-2 text-sm">
           Записаться
-        </ConsultationButton>
+        </ButtonLink>
       </Container>
     </header>
   );

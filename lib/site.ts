@@ -5,7 +5,9 @@ export const site = {
   telegram: "https://t.me/careerplus",
   instagram: "https://instagram.com/careerplus.us",
   threads: "https://www.threads.net/@careerplus.us",
-  calendly: "https://calendly.com/promigrantcalendly/cons",
+  calendlyPaid: "https://calendly.com/careerplus/paid-consultation-100",
+  calendlyFree: "https://calendly.com/careerplus/free-strategy-consultation",
+  calendly: "https://calendly.com/careerplus/paid-consultation-100",
   whop: {
     course: "https://whop.com/careerplus-work-abroad-course",
     review: "https://whop.com/careerplus-work-abroad-review",
@@ -18,5 +20,5 @@ export const navItems = [
   { label: "Курсы", href: "/courses" },
   { label: "Кейсы", href: "/cases" },
   { label: "Как работаем", href: "/how-we-work" },
-  { label: "Калькулятор", href: "/#salary-calculator" }
+  { label: "Калькулятор", href: "/calculator" }
 ];

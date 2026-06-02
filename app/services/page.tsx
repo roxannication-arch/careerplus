@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { ButtonLink } from "@/components/ButtonLink";
-import { ConsultationButton } from "@/components/ConsultationQuiz";
 import { Container } from "@/components/Container";
 import { SectionHeader } from "@/components/SectionHeader";
+import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "CareerPlus DFY",
@@ -18,7 +18,7 @@ const included = [
   "Позиционирование, резюме, LinkedIn и pitch под зарубежного работодателя",
   "Поисковая стратегия: target-компании, воронка, outreach и рефералки",
   "Подготовка к интервью на английском и коммуникации с рекрутёрами",
-  "Сопровождение до переговоров по офферу"
+  "Подготовка к переговорам по офферу"
 ];
 
 const bestFor = [
@@ -45,7 +45,7 @@ export default function ServicesPage() {
               профиля до интервью и переговоров.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <ConsultationButton>Записаться на консультацию</ConsultationButton>
+              <ButtonLink href={site.calendlyFree}>Бесплатная консультация</ButtonLink>
               <ButtonLink href="/courses" variant="secondary">
                 Сначала посмотреть курсы
               </ButtonLink>
@@ -99,11 +99,14 @@ export default function ServicesPage() {
               Обсудим вашу цель и реалистичный маршрут
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-7 text-muted">
-              На консультации определим рынок, формат поддержки и следующий шаг без давления и универсальных обещаний.
+              На консультации обсудим рынок, формат поддержки и следующий шаг без давления и универсальных обещаний.
             </p>
-            <ConsultationButton className="mt-8">
-              Записаться на консультацию
-            </ConsultationButton>
+            <ButtonLink href={site.calendlyFree} className="mt-8">
+              Записаться на бесплатную стратегическую консультацию
+            </ButtonLink>
+            <p className="mt-4 text-xs leading-5 text-muted">
+              Консультация — это разговор о возможном сотрудничестве, а не аудит или обучение.
+            </p>
           </div>
         </Container>
       </section>
