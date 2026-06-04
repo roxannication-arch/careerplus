@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ConsultationButton } from "@/components/ConsultationQuiz";
+import { QualificationButton } from "@/components/QualificationQuiz";
 import { Container } from "@/components/Container";
 import { SectionHeader } from "@/components/SectionHeader";
 
@@ -19,7 +19,7 @@ const steps = [
   },
   {
     title: "Стратегия",
-    body: "Определяем позиционирование, target-роли, geography, тип компаний и структуру карьерной воронки."
+    body: "Определяем позиционирование, целевые роли, географию, тип компаний и формат карьерной воронки."
   },
   {
     title: "Упаковка",
@@ -79,7 +79,7 @@ export default function HowWeWorkPage() {
               качественные касания и подготовка к каждому разговору.
             </p>
             <div>
-              <ConsultationButton>Обсудить мой маршрут</ConsultationButton>
+              <QualificationButton>Записаться</QualificationButton>
             </div>
           </div>
         </Container>

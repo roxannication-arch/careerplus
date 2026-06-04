@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ConsultationButton } from "@/components/ConsultationQuiz";
+import { QualificationButton } from "@/components/QualificationQuiz";
 import { Container } from "@/components/Container";
 import { SectionHeader } from "@/components/SectionHeader";
 import { site } from "@/lib/site";
@@ -43,9 +43,9 @@ export default function ContactPage() {
                 Threads
               </a>
             </div>
-            <ConsultationButton className="mt-8">
+            <QualificationButton className="mt-8">
               Пройти квиз и записаться
-            </ConsultationButton>
+            </QualificationButton>
           </div>
 
           <form

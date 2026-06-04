@@ -5,13 +5,14 @@ export const site = {
   telegram: "https://t.me/careerplus",
   instagram: "https://instagram.com/careerplus.us",
   threads: "https://www.threads.net/@careerplus.us",
-  calendlyPaid: "https://calendly.com/careerplus/paid-consultation-100",
-  calendlyFree: "https://calendly.com/careerplus/free-strategy-consultation",
-  calendly: "https://calendly.com/careerplus/paid-consultation-100",
+  calendlyPaid: "https://calendly.com/roxannication/consult",
+  calendlyFree: "https://calendly.com/roxannication/1-1-meeting",
+  consultationWhop: "https://whop.com/checkout/plan_zae3POrVmFgQP",
+  calendly: "https://calendly.com/roxannication/1-1-meeting",
   whop: {
-    course: "https://whop.com/careerplus-work-abroad-course",
-    review: "https://whop.com/careerplus-work-abroad-review",
-    premium: "https://whop.com/careerplus-work-abroad-1-1"
+    course: "https://whop.com/checkout/plan_ksRtbnaFlteub",
+    review: "https://whop.com/careerplus-work-abroad-review-placeholder",
+    premium: "https://whop.com/careerplus-work-abroad-premium-placeholder"
   }
 };
 

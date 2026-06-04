@@ -6,100 +6,161 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "CareerPlus DFY",
-  description:
-    "Премиальное сопровождение под ключ для специалистов, которые целятся в США/UK и хотят, чтобы команда вела процесс.",
+  description: "Сопровождение под ключ в США или UK для русскоязычных digital- и corporate-специалистов.",
   alternates: {
     canonical: "/services"
   }
 };
 
-const startSteps = [
-  {
-    title: "Бесплатная стратегическая консультация",
-    body: "Коротко обсуждаем цель, рынок, текущую ситуацию и понимаем, есть ли смысл рассматривать формат под ключ."
-  },
-  {
-    title: "Предложение формата",
-    body: "Если есть fit, описываем возможный маршрут, объём работы, ориентир по инвестиции и роли команды."
-  },
-  {
-    title: "Старт сопровождения",
-    body: "После согласования формата собираем стратегию, материалы и систему поиска как управляемый проект."
-  }
+const companies = ["Apple", "TikTok", "Meta", "Pinterest", "Zoom", "Disney", "Universal"];
+
+const forWhom = [
+  "Уже работаете в digital или corporate и хотите выйти на международный рынок",
+  "Есть разрешение на работу в США или UK (Green Card, EAD, H-1B, ILR, Skilled Worker и подобные)",
+  "Готовы плотно работать 3–6 месяцев — это процесс, не разовая консультация",
+  "Хотите команду, которая делает работу за вас, а не учит вас делать её самостоятельно"
+];
+
+const notFor = [
+  "Если ещё нет разрешения на работу — мы не помогаем с поиском спонсорства визы",
+  "Если вы только начинаете карьеру с нуля без профессии",
+  "Если ищете магию: «верните мне работу мечты за две недели»"
 ];
 
 const included = [
-  "Диагностика профиля и выбор реалистичного рынка",
-  "Позиционирование, резюме, LinkedIn и pitch под зарубежного работодателя",
-  "Поисковая стратегия: target-компании, воронка, outreach и рефералки",
-  "Подготовка к интервью на английском и коммуникации с рекрутёрами",
-  "Подготовка к переговорам по офферу"
+  {
+    title: "Стратегия рынка",
+    body: "Выбираем целевые компании, роли, географию. Не «откликайся куда попало», а конкретный список из 30–50 компаний под вас."
+  },
+  {
+    title: "Упаковка профиля",
+    body: "Резюме под международный стандарт и ATS. LinkedIn, который находят зарубежные рекрутёры."
+  },
+  {
+    title: "Поиск через outreach и рефералки",
+    body: "Точечный заход в компании из списка. Один реферал работает как 20 холодных откликов."
+  },
+  {
+    title: "Подготовка к интервью",
+    body: "Формат, культурные коды, поведенческие вопросы, моки на английском."
+  },
+  {
+    title: "Переговоры и оффер",
+    body: "Ведём переговоры вместе с вами или за вас. Здесь обычно ещё +20–40% к первому предложению."
+  }
 ];
 
-const bestFor = [
-  "Уже есть профессиональный опыт и понятная специализация",
-  "Приоритет — США/UK, global teams или удалённые роли",
-  "Нужна команда, которая держит процесс, а не ещё один список советов",
-  "Готовность вкладываться в системный карьерный переход"
+const startSteps = [
+  {
+    title: "Бесплатная стратегическая консультация",
+    body: "Час разговора: ваша цель, рынок, ситуация. Решаем вместе, есть ли смысл идти под ключ или вам подойдёт другой формат."
+  },
+  {
+    title: "Предложение по работе",
+    body: "Если работаем вместе — описываем подход, объём, сроки и ориентир по цене. Никаких сюрпризов на середине."
+  },
+  {
+    title: "Старт сопровождения",
+    body: "Собираем стратегию, материалы и систему поиска. Команда подключается, вы фокусируетесь на интервью."
+  }
+];
+
+const faq = [
+  ["Сколько времени занимает поиск работы с CareerPlus?", "Обычно это процесс на несколько месяцев. Срок зависит от рынка, профессии, документов, уровня позиции и вашей готовности включаться в интервью."],
+  ["Что если оффер не появится за оговоренный срок?", "Мы заранее обсуждаем рамки работы и точки пересмотра. Если рынок отвечает не так, как ожидали, меняем список компаний, позиционирование и тактику поиска."],
+  ["Гарантируете ли вы оффер?", "Нет. Мы не продаём гарантию результата. Мы делаем поиск управляемым: стратегия, упаковка, воронка, подготовка и переговоры."],
+  ["Работаете ли вы с тем, у кого нет разрешения на работу?", "Нет, в формате DFY мы работаем с теми, у кого уже есть право работать в США или UK."],
+  ["Какие отрасли и роли вы ведёте?", "Digital и corporate: product, project, marketing, operations, analytics, HR, finance, design, engineering и смежные роли."],
+  ["Как происходит оплата?", "После консультации и согласования формата. До этого вы понимаете объём работы, цену и следующий шаг."],
+  ["Можно ли совмещать с текущей работой?", "Да. Но понадобится время на интервью, согласование материалов и регулярную коммуникацию с командой."],
+  ["Что входит в цену, а что не входит?", "Входит работа команды по поиску и подготовке. Не входят сторонние расходы: переводы, юристы, пошлины, платные сервисы и похожие вещи." ]
 ];
 
 export default function ServicesPage() {
   return (
     <>
       <section className="hero-surface border-b border-ink/15 py-20 md:py-28">
-        <Container className="grid gap-10 lg:grid-cols-[1fr_0.9fr] lg:items-center">
+        <Container className="grid gap-10 lg:grid-cols-[1fr_0.85fr] lg:items-center">
           <div>
-            <p className="mb-5 text-xs font-bold uppercase tracking-[0.24em] text-accent">CareerPlus DFY</p>
+            <p className="mb-5 text-xs font-bold uppercase tracking-[0.24em] text-accent">CAREERPLUS DFY</p>
             <h1 className="text-balance text-5xl font-extrabold uppercase leading-[0.95] tracking-tight text-ink md:text-7xl">
-              Премиальное сопровождение под ключ
+              Сопровождение под ключ в США или UK
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-8 text-muted md:text-lg">
-              Для специалистов, которые целятся в США/UK и хотят, чтобы команда помогала держать процесс: от
-              стратегии и упаковки профиля до интервью и переговоров.
+              Команда ведёт ваш карьерный переход от первой стратегии до подписанного оффера. Вы фокусируетесь на
+              интервью — мы на всём остальном.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <ButtonLink href={site.calendlyFree}>Записаться на бесплатную консультацию</ButtonLink>
-              <ButtonLink href="#how-to-start" variant="secondary">
-                Как это работает
-              </ButtonLink>
-            </div>
+            <ButtonLink href={site.calendlyFree} className="mt-8">
+              Записаться на бесплатную консультацию
+            </ButtonLink>
           </div>
-
-          <div className="grid gap-4">
-            <div className="rounded-[2rem] border border-accent bg-ink p-8 text-white">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/60">Первый шаг</p>
-              <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white">
-                Бесплатная стратегическая консультация
-              </h2>
-              <p className="mt-5 text-sm leading-7 text-white/70">
-                Это вход в формат под ключ: обсуждаем цель, контекст и возможное сотрудничество. Без оплаты и без
-                обязательств.
-              </p>
-              <ButtonLink href={site.calendlyFree} className="mt-7 border-white bg-white text-ink hover:border-white hover:bg-white/90">
-                Выбрать время
-              </ButtonLink>
-              <p className="mt-4 text-xs leading-5 text-white/55">
-                Консультация — это разговор о возможном сотрудничестве, а не аудит или обучение.
-              </p>
-            </div>
-
-            <div className="rounded-[2rem] border border-ink/20 bg-white p-8">
-              <p className="text-sm text-muted">Инвестиция в сопровождение</p>
-              <div className="mt-3 text-5xl font-bold tracking-tight text-ink">$2 500+</div>
-              <p className="mt-5 text-sm leading-6 text-muted">
-                Финальный формат и объём работы определяются после консультации и диагностики цели.
-              </p>
-            </div>
+          <div className="rounded-[2rem] border border-ink/20 bg-white p-8">
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-accent">Цена</p>
+            <h2 className="mt-4 text-5xl font-extrabold tracking-tight text-ink">От $2 500</h2>
+            <p className="mt-5 text-sm leading-6 text-muted">
+              Финальная цена обсуждается на консультации — зависит от рынка, уровня позиции и объёма работы. Мы честно
+              говорим, во что обойдётся работа с нами, прежде чем вы что-то платите.
+            </p>
           </div>
         </Container>
       </section>
 
-      <section id="how-to-start" className="border-b border-ink/15 bg-soft/70 py-20">
+      <section className="py-20">
+        <Container className="grid gap-8 lg:grid-cols-2">
+          <div className="rounded-[1.75rem] border border-ink/20 bg-white p-8">
+            <h2 className="text-3xl font-semibold tracking-tight text-ink">Для кого это</h2>
+            <ul className="mt-6 grid gap-4 text-sm leading-6 text-muted">
+              {forWhom.map((item) => (
+                <li key={item} className="flex gap-3"><span className="text-accent">✓</span><span>{item}</span></li>
+              ))}
+            </ul>
+          </div>
+          <div className="rounded-[1.75rem] border border-ink/20 bg-white p-8">
+            <h2 className="text-3xl font-semibold tracking-tight text-ink">Для кого это НЕ подойдёт</h2>
+            <ul className="mt-6 grid gap-4 text-sm leading-6 text-muted">
+              {notFor.map((item) => (
+                <li key={item} className="flex gap-3"><span className="text-accent">×</span><span>{item}</span></li>
+              ))}
+            </ul>
+          </div>
+        </Container>
+      </section>
+
+      <section className="border-y border-ink/15 bg-soft/70 py-20">
+        <Container>
+          <SectionHeader title="Что делает команда" />
+          <div className="mt-10 grid gap-4">
+            {included.map((item, index) => (
+              <article key={item.title} className="rounded-2xl border border-ink/20 bg-white p-6">
+                <p className="text-sm font-semibold text-accent">0{index + 1}</p>
+                <h3 className="mt-3 text-xl font-semibold text-ink">{item.title}</h3>
+                <p className="mt-3 text-sm leading-6 text-muted">{item.body}</p>
+              </article>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section className="py-20">
+        <Container>
+          <SectionHeader title="Наши клиенты работают здесь" />
+          <div className="mt-8 flex flex-wrap gap-3">
+            {companies.map((company) => (
+              <span key={company} className="rounded-full border border-ink/15 bg-white px-5 py-3 text-sm font-extrabold uppercase tracking-tight text-ink/70">
+                {company}
+              </span>
+            ))}
+          </div>
+          <ButtonLink href="/cases" className="mt-8">Смотреть кейсы клиентов</ButtonLink>
+        </Container>
+      </section>
+
+      <section className="border-y border-ink/15 bg-soft/70 py-20">
         <Container>
           <SectionHeader
-            eyebrow="Как начать"
-            title="Сначала — консультация, потом решение по формату"
-            description="Мы специально разделяем бесплатную стратегическую консультацию и само сопровождение, чтобы обе стороны понимали fit до старта работы."
+            eyebrow="КАК НАЧАТЬ"
+            title="Сначала консультация, потом работа"
+            description="Мы специально разделяем первый бесплатный звонок и само сопровождение — чтобы обе стороны поняли, можем ли реально работать вместе, прежде чем что-то начинать."
           />
           <div className="mt-10 grid gap-5 lg:grid-cols-3">
             {startSteps.map((step, index) => (
@@ -114,54 +175,32 @@ export default function ServicesPage() {
       </section>
 
       <section className="py-20">
-        <Container className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-          <SectionHeader
-            eyebrow="Что входит"
-            title="Команда ведёт карьерный переход как проект"
-            description="Мы работаем с воронкой, позиционированием и коммуникацией, а не только с резюме."
-          />
-          <div className="grid gap-4">
-            {included.map((item, index) => (
-              <div key={item} className="rounded-2xl border border-ink/20 bg-white p-6">
-                <p className="text-sm font-semibold text-accent">0{index + 1}</p>
-                <p className="mt-3 text-base leading-7 text-ink">{item}</p>
-              </div>
+        <Container className="max-w-4xl">
+          <SectionHeader eyebrow="FAQ" title="Частые вопросы" />
+          <div className="mt-10 grid gap-3">
+            {faq.map(([question, answer]) => (
+              <details key={question} className="group rounded-[1.5rem] border border-ink/20 bg-white p-6 open:border-accent">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-6 text-base font-semibold text-ink">
+                  {question}
+                  <span className="text-2xl text-accent transition-transform group-open:rotate-45">+</span>
+                </summary>
+                <p className="mt-4 text-sm leading-7 text-muted">{answer}</p>
+              </details>
             ))}
           </div>
         </Container>
       </section>
 
-      <section className="border-y border-ink/15 bg-soft/70 py-20">
-        <Container>
-          <SectionHeader eyebrow="Кому подходит" title="Когда формат под ключ оправдан" />
-          <div className="mt-10 grid gap-5 md:grid-cols-2">
-            {bestFor.map((item) => (
-              <div key={item} className="rounded-2xl border border-ink/20 bg-white p-6 text-sm leading-6 text-muted">
-                {item}
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      <section className="py-20">
-        <Container>
-          <div className="rounded-[2rem] border border-ink/20 bg-white p-8 md:p-12">
-            <p className="text-sm font-bold uppercase tracking-[0.2em] text-accent">Следующий шаг</p>
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-ink md:text-5xl">
-              Запишитесь на бесплатную стратегическую консультацию
-            </h2>
-            <p className="mt-5 max-w-2xl text-base leading-7 text-muted">
-              Обсудим цель, текущую ситуацию и возможный формат сотрудничества без давления и универсальных обещаний.
-            </p>
-            <ButtonLink href={site.calendlyFree} className="mt-8">
-              Выбрать время
-            </ButtonLink>
-            <p className="mt-4 text-xs leading-5 text-muted">
-              Консультация — это разговор о возможном сотрудничестве, а не аудит или обучение.
-            </p>
-          </div>
-        </Container>
+      <section className="px-5 py-20 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-5xl rounded-[2rem] border border-accent bg-accent p-8 text-center md:p-12">
+          <h2 className="text-3xl font-bold tracking-tight text-white md:text-5xl">Не уверены, подходит ли вам сопровождение?</h2>
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-white/85">
+            Запишитесь на бесплатную консультацию. За час разберём вашу ситуацию и честно скажем, можем ли быть полезны.
+          </p>
+          <ButtonLink href={site.calendlyFree} className="mt-8 border-white bg-white text-ink hover:border-white hover:bg-white/90">
+            Записаться на бесплатную консультацию
+          </ButtonLink>
+        </div>
       </section>
     </>
   );

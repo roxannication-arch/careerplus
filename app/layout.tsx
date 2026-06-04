@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 import "./globals.css";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { ConsultationQuiz } from "@/components/ConsultationQuiz";
+import { QualificationQuiz } from "@/components/QualificationQuiz";
 import { site } from "@/lib/site";
 
 const inter = Inter({
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: "%s | CareerPlus"
   },
   description:
-    "CareerPlus помогает русскоязычным специалистам выходить на международный рынок труда под ключ или через структурированные курсы.",
+    "CareerPlus помогает русскоязычным специалистам выходить на международный рынок труда под ключ или через курсы.",
   keywords: [
     "CareerPlus",
     "работа за рубежом",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     siteName: site.name,
     title: "CareerPlus — работа за рубежом для профессионалов",
     description:
-      "Под ключ или через структурированные курсы: выход на международный рынок труда для русскоязычных специалистов.",
+      "Под ключ или через курсы: выход на международный рынок труда для русскоязычных специалистов.",
     images: [
       {
         url: "/og.svg",
@@ -68,7 +68,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Header />
         <main>{children}</main>
         <Footer />
-        <ConsultationQuiz />
+        <QualificationQuiz />
       </body>
     </html>
   );

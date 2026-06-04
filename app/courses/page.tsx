@@ -5,8 +5,8 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { courses } from "@/lib/courses";
 
 export const metadata: Metadata = {
-  title: "Курсы",
-  description: "Структурированные программы CareerPlus для самостоятельного выхода на международный рынок.",
+  title: "Курсы для самостоятельного поиска",
+  description: "Курсы CareerPlus для самостоятельного выхода на международный рынок.",
   alternates: {
     canonical: "/courses"
   },
@@ -23,7 +23,7 @@ export default function CoursesPage() {
         <SectionHeader
           eyebrow="Обучение"
           title="Курсы"
-          description="Структурированные программы для самостоятельного выхода на международный рынок."
+          description="Программы для тех, кто хочет идти на международный рынок сам, но не наугад. Метод, шаблоны, чек-листы."
         />
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {courses.map((course) => (
