@@ -103,7 +103,7 @@ export default function HomePage() {
 
       <section className="py-20">
         <Container className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
-          <SectionHeader eyebrow="О CareerPlus" title="Мы строим карьерный переход как проект, а не как хаотичный поиск." />
+          <SectionHeader eyebrow="О CAREERPLUS" title="КОМАНДА, КОТОРАЯ БЕРЁТ ВАШ ПОИСК НА СЕБЯ." />
           <div className="grid gap-5 text-base leading-8 text-muted">
             <p>
               CareerPlus — карьерный центр для русскоязычных иммигрантов. Мы первые, кто делает поиск работы в США и
