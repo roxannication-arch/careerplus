@@ -133,7 +133,7 @@ export default function ConsultationPage() {
           <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-white/85">
             Час — не так много времени, но достаточно, чтобы получить честный план и сэкономить месяцы движения не туда.
           </p>
-          <ButtonLink href="#consultation-form" className="mt-8 border-white bg-white text-ink hover:border-white hover:bg-white/90">
+          <ButtonLink href="#consultation-form" variant="light" className="mt-8">
             Записаться на консультацию
           </ButtonLink>
           <p className="mt-5 text-sm text-white/80">После анкеты откроется оплата, после оплаты — выбор времени для звонка.</p>

@@ -152,7 +152,7 @@ export default function HomePage() {
                 <p><strong className="text-white">Кому подходит:</strong> есть право работать в US/UK и вы готовы к плотному поиску.</p>
                 <p><strong className="text-white">Что получите:</strong> команда строит стратегию, упаковку, воронку, подготовку и переговоры.</p>
               </div>
-              <ButtonLink href="/services" className="mt-8 border-white bg-white text-ink hover:border-white hover:bg-white/90">
+              <ButtonLink href="/services" variant="light" className="mt-8">
                 Узнать о сопровождении
               </ButtonLink>
             </article>
