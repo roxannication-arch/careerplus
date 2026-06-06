@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { QualificationButton } from "@/components/QualificationQuiz";
+import { ButtonLink } from "@/components/ButtonLink";
 import { Container } from "@/components/Container";
 import { SectionHeader } from "@/components/SectionHeader";
 
@@ -80,7 +80,7 @@ export default function CasesPage() {
             ))}
           </div>
           <div className="mt-10">
-            <QualificationButton>Обсудить похожую цель</QualificationButton>
+            <ButtonLink href="/#formats">Обсудить похожую цель</ButtonLink>
           </div>
         </Container>
       </section>

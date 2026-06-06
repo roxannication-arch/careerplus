@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { ButtonLink } from "@/components/ButtonLink";
 import { Container } from "@/components/Container";
-import { QualificationButton } from "@/components/QualificationQuiz";
 import { SalaryCalculator } from "@/components/SalaryCalculator";
 import { SectionHeader } from "@/components/SectionHeader";
 
@@ -14,12 +13,6 @@ export const metadata: Metadata = {
   }
 };
 
-const metrics = [
-  { value: "4 года", label: "команде CareerPlus" },
-  { value: "5 человек", label: "в команде: стратегия, исполнение, поддержка" },
-  { value: "US / UK / Remote", label: "рынки, на которые выходим" }
-];
-
 const companies = ["Apple", "TikTok", "Meta", "Pinterest", "Zoom", "Disney", "Universal"];
 
 const routeSteps = [
@@ -30,6 +23,21 @@ const routeSteps = [
   "Переговоры и оффер"
 ];
 
+function LogoStrip() {
+  return (
+    <div className="rounded-[1.75rem] border border-ink/20 bg-white p-6">
+      <p className="text-sm font-bold uppercase tracking-[0.18em] text-accent">Наши клиенты работают здесь</p>
+      <div className="mt-5 flex flex-wrap gap-3">
+        {companies.map((company) => (
+          <span key={company} className="rounded-full border border-ink/15 bg-page px-4 py-2 text-sm font-extrabold uppercase tracking-tight text-ink/70">
+            {company}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function HomePage() {
   return (
     <>
@@ -37,7 +45,7 @@ export default function HomePage() {
         <Container className="grid min-h-[calc(100vh-8rem)] items-center gap-10 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:py-24">
           <div>
             <div className="mb-7 flex flex-wrap gap-3">
-              {["US / UK", "REMOTE", "DIGITAL SPECIALISTS"].map((chip) => (
+              {["US", "UK", "REMOTE", "DIGITAL & CORPORATE"].map((chip) => (
                 <span key={chip} className="rounded-full border border-ink/15 bg-white px-4 py-2 text-xs font-bold uppercase tracking-wide text-ink/70">
                   {chip}
                 </span>
@@ -47,18 +55,15 @@ export default function HomePage() {
               CAREER CONSULTING FOR GLOBAL ROLES
             </p>
             <h1 className="text-balance text-5xl font-extrabold uppercase leading-[0.95] tracking-tight text-ink md:text-7xl">
-              Карьерный переход как проект, а не хаотичный поиск
+              Не учим искать работу — ищем её вместе с вами.
             </h1>
             <p className="mt-6 max-w-2xl text-base font-medium leading-8 text-ink/70 md:text-lg">
               Помогаем русскоязычным специалистам выходить на международный рынок труда. Команда делает работу под
               ключ — стратегия, упаковка профиля, точечный поиск, переговоры. Без слепых рассылок и сказок про работу
               мечты.
             </p>
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <QualificationButton>Записаться</QualificationButton>
-              <ButtonLink href="/courses" variant="secondary">
-                Посмотреть курсы
-              </ButtonLink>
+            <div className="mt-9">
+              <ButtonLink href="#formats" variant="secondary">Выбрать формат</ButtonLink>
             </div>
           </div>
           <div className="brand-panel rounded-[2rem] border border-ink/20 p-7 md:p-9">
@@ -80,23 +85,18 @@ export default function HomePage() {
 
       <section className="border-b border-ink/15 bg-soft/70 py-16">
         <Container>
-          <div className="grid gap-4 md:grid-cols-3">
-            {metrics.map((metric) => (
-              <div key={metric.value} className="rounded-[1.75rem] border border-ink/20 bg-white p-6">
-                <div className="text-4xl font-extrabold tracking-tight text-accent">{metric.value}</div>
-                <p className="mt-3 text-sm font-medium leading-6 text-muted">{metric.label}</p>
-              </div>
-            ))}
-          </div>
-          <div className="mt-8 rounded-[1.75rem] border border-ink/20 bg-white p-6">
-            <p className="text-sm font-bold uppercase tracking-[0.18em] text-accent">Наши клиенты работают здесь</p>
-            <div className="mt-5 flex flex-wrap gap-3">
-              {companies.map((company) => (
-                <span key={company} className="rounded-full border border-ink/15 bg-page px-4 py-2 text-sm font-extrabold uppercase tracking-tight text-ink/70">
-                  {company}
-                </span>
-              ))}
+          <div className="grid gap-4 md:grid-cols-2">
+            <div className="rounded-[1.75rem] border border-ink/20 bg-white p-6">
+              <div className="text-4xl font-extrabold tracking-tight text-accent">4 года</div>
+              <p className="mt-3 text-sm font-medium leading-6 text-muted">на рынке</p>
             </div>
+            <div className="rounded-[1.75rem] border border-ink/20 bg-white p-6">
+              <div className="text-4xl font-extrabold tracking-tight text-accent">5 человек</div>
+              <p className="mt-3 text-sm font-medium leading-6 text-muted">команда: стратегия, исполнение, поддержка</p>
+            </div>
+          </div>
+          <div className="mt-4">
+            <LogoStrip />
           </div>
         </Container>
       </section>
@@ -136,45 +136,48 @@ export default function HomePage() {
                 Я за то, чтобы каждый кайфовал от своей работы в найме. Не любил её обязательно — а понимал, во что
                 вписался и зачем. Это и есть та самая «карьера с умом», которую мы строим вместе с клиентами.
               </p>
-              <p>
-                Сейчас в команде CareerPlus нас пятеро. Я держу стратегию и продажи, команда ведёт клиентов от первой
-                консультации до подписанного оффера.
-              </p>
             </div>
           </div>
         </Container>
       </section>
 
-      <section className="py-20">
+      <section id="formats" className="py-20">
         <Container>
           <SectionHeader
-            eyebrow="Два формата"
+            eyebrow="Три формата"
             title="Выбирайте, как удобнее"
-            description="Хотите, чтобы команда вела процесс — берите сопровождение. Хотите идти сами по понятной системе — берите курс."
+            description="Курс — если идёте сами. Консультация — если нужен час честного разбора. Под ключ — если хотите, чтобы команда делала поиск вместе с вами."
           />
-          <div className="mt-10 grid gap-5 lg:grid-cols-2">
-            <article className="rounded-[1.75rem] border border-accent bg-ink p-8 text-white">
-              <p className="text-sm font-semibold text-white/70">Сопровождение под ключ</p>
-              <h2 className="mt-4 text-2xl font-semibold tracking-tight text-white">CareerPlus DFY</h2>
-              <p className="mt-4 text-base leading-7 text-white/70">
-                Команда ведёт ваш переход — стратегия рынка, упаковка профиля, поиск через точечный outreach и
-                рефералки, подготовка к интервью, переговоры по офферу. Вы фокусируетесь на собеседованиях, мы — на
-                воронке.
-              </p>
-              <ButtonLink href="/services" className="mt-8 border-white bg-white text-ink hover:border-white hover:bg-white/90">
-                Узнать о сопровождении
-              </ButtonLink>
+          <div className="mt-10 grid gap-5 lg:grid-cols-3">
+            <article className="rounded-[1.75rem] border border-ink/20 bg-white p-8">
+              <p className="text-sm font-semibold text-accent">$79 · курс</p>
+              <h2 className="mt-4 text-2xl font-semibold tracking-tight text-ink">Работа за рубежом для digital-специалистов</h2>
+              <div className="mt-5 grid gap-4 text-sm leading-6 text-muted">
+                <p><strong className="text-ink">Кому подходит:</strong> есть профессия, хотите идти сами, но не наугад.</p>
+                <p><strong className="text-ink">Что получите:</strong> 8 уроков, шаблоны, чек-листы, метод поиска без слепых рассылок.</p>
+              </div>
+              <ButtonLink href="/courses/work-abroad" className="mt-8">Смотреть курс</ButtonLink>
             </article>
 
             <article className="rounded-[1.75rem] border border-ink/20 bg-white p-8">
-              <p className="text-sm font-semibold text-accent">От $79</p>
-              <h2 className="mt-4 text-2xl font-semibold tracking-tight text-ink">Курсы для самостоятельного поиска</h2>
-              <p className="mt-4 text-base leading-7 text-muted">
-                Программа для тех, кто хочет идти сам, но не наугад. Метод выхода на международный рынок: резюме под
-                ATS, LinkedIn под зарубежных рекрутёров, поиск без слепых рассылок.
-              </p>
-              <ButtonLink href="/courses" className="mt-8">
-                Смотреть курсы
+              <p className="text-sm font-semibold text-accent">$100 · 1 час</p>
+              <h2 className="mt-4 text-2xl font-semibold tracking-tight text-ink">Консультация с Роксаной</h2>
+              <div className="mt-5 grid gap-4 text-sm leading-6 text-muted">
+                <p><strong className="text-ink">Кому подходит:</strong> нужен честный взгляд со стороны и план следующих шагов.</p>
+                <p><strong className="text-ink">Что получите:</strong> разбор ситуации, оценку рынка и конкретные 3 шага дальше.</p>
+              </div>
+              <ButtonLink href="/consultation" className="mt-8">Записаться на консультацию</ButtonLink>
+            </article>
+
+            <article className="rounded-[1.75rem] border border-accent bg-ink p-8 text-white">
+              <p className="text-sm font-semibold text-white/70">от $2 500 · под ключ</p>
+              <h2 className="mt-4 text-2xl font-semibold tracking-tight text-white">CareerPlus DFY</h2>
+              <div className="mt-5 grid gap-4 text-sm leading-6 text-white/70">
+                <p><strong className="text-white">Кому подходит:</strong> есть право работать в US/UK и вы готовы к плотному поиску.</p>
+                <p><strong className="text-white">Что получите:</strong> команда строит стратегию, упаковку, воронку, подготовку и переговоры.</p>
+              </div>
+              <ButtonLink href="/services" className="mt-8 border-white bg-white text-ink hover:border-white hover:bg-white/90">
+                Узнать о сопровождении
               </ButtonLink>
             </article>
           </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { QualificationButton } from "./QualificationQuiz";
+import { ButtonLink } from "./ButtonLink";
 
 type Market = "us" | "uk" | "eu" | "remote";
 
@@ -211,7 +211,7 @@ export function SalaryCalculator() {
                   <p className="rounded-2xl border border-ink/20 bg-soft/80 p-4 text-sm leading-6 text-muted">
                     {result.insight}
                   </p>
-                  <QualificationButton className="w-full">Выйти на рыночный уровень →</QualificationButton>
+                  <ButtonLink href="/consultation" className="w-full">Разобрать ситуацию →</ButtonLink>
                 </div>
               ) : (
                 <div className="rounded-2xl border border-ink/20 bg-soft/80 p-6 text-center text-sm text-muted">

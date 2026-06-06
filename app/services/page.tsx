@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { ButtonLink } from "@/components/ButtonLink";
+import { QualificationButton } from "@/components/QualificationQuiz";
 import { Container } from "@/components/Container";
 import { SectionHeader } from "@/components/SectionHeader";
-import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "CareerPlus DFY",
@@ -90,9 +90,9 @@ export default function ServicesPage() {
               Команда ведёт ваш карьерный переход от первой стратегии до подписанного оффера. Вы фокусируетесь на
               интервью — мы на всём остальном.
             </p>
-            <ButtonLink href={site.calendlyFree} className="mt-8">
+            <QualificationButton className="mt-8">
               Записаться на бесплатную консультацию
-            </ButtonLink>
+            </QualificationButton>
           </div>
           <div className="rounded-[2rem] border border-ink/20 bg-white p-8">
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-accent">Цена</p>
@@ -197,9 +197,9 @@ export default function ServicesPage() {
           <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-white/85">
             Запишитесь на бесплатную консультацию. За час разберём вашу ситуацию и честно скажем, можем ли быть полезны.
           </p>
-          <ButtonLink href={site.calendlyFree} className="mt-8 border-white bg-white text-ink hover:border-white hover:bg-white/90">
+          <QualificationButton className="mt-8 border-white bg-white text-ink hover:border-white hover:bg-white/90">
             Записаться на бесплатную консультацию
-          </ButtonLink>
+          </QualificationButton>
         </div>
       </section>
     </>

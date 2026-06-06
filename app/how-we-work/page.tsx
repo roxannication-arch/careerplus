@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { QualificationButton } from "@/components/QualificationQuiz";
+import { ButtonLink } from "@/components/ButtonLink";
 import { Container } from "@/components/Container";
 import { SectionHeader } from "@/components/SectionHeader";
 
@@ -79,7 +79,7 @@ export default function HowWeWorkPage() {
               качественные касания и подготовка к каждому разговору.
             </p>
             <div>
-              <QualificationButton>Записаться</QualificationButton>
+              <ButtonLink href="/#formats">Выбрать формат</ButtonLink>
             </div>
           </div>
         </Container>

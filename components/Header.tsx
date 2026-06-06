@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { QualificationButton } from "./QualificationQuiz";
+import { ButtonLink } from "./ButtonLink";
 import { Container } from "./Container";
 import { Logo } from "./Logo";
 import { localeLabels } from "@/lib/i18n";
@@ -28,9 +28,9 @@ export function Header() {
               {localeLabels.en}
             </Link>
           </div>
-          <QualificationButton className="hidden px-5 py-2.5 sm:inline-flex">
-            Записаться
-          </QualificationButton>
+          <ButtonLink href="/#formats" variant="secondary" className="hidden px-5 py-2.5 sm:inline-flex">
+            Выбрать формат
+          </ButtonLink>
         </div>
       </Container>
       <Container className="flex gap-4 overflow-x-auto border-t border-ink/15 py-3 lg:hidden">
@@ -39,9 +39,9 @@ export function Header() {
             {item.label}
           </Link>
         ))}
-        <QualificationButton className="shrink-0 px-4 py-2 text-sm">
-          Записаться
-        </QualificationButton>
+        <ButtonLink href="/#formats" variant="secondary" className="shrink-0 px-4 py-2 text-sm">
+          Выбрать формат
+        </ButtonLink>
       </Container>
     </header>
   );
