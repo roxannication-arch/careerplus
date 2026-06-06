@@ -262,7 +262,7 @@ export default function ServicesPage() {
           <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-white/85">
             Запишитесь на бесплатную консультацию. За час разберём вашу ситуацию и честно скажем, можем ли быть полезны.
           </p>
-          <QualificationButton variant="light" className="mt-8">
+          <QualificationButton variant="light" className="mt-8 !text-ink">
             Записаться на бесплатную консультацию
           </QualificationButton>
         </div>

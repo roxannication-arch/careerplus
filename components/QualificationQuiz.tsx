@@ -50,7 +50,7 @@ export function QualificationButton({
     primary: "border-accent bg-accent text-white hover:border-accent-hover hover:bg-accent-hover",
     secondary: "border-ink/20 bg-white text-ink hover:border-accent hover:text-ink",
     ghost: "border-ink/20 bg-transparent text-ink hover:border-accent hover:text-ink",
-    light: "border-white bg-white text-ink hover:border-white hover:bg-white/90 hover:text-ink"
+    light: "border-white bg-white !text-ink hover:border-white hover:bg-white/90 hover:!text-ink"
   };
 
   return (
