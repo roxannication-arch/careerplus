@@ -5,14 +5,41 @@ import { Container } from "@/components/Container";
 import { SectionHeader } from "@/components/SectionHeader";
 
 export const metadata: Metadata = {
-  title: "CareerPlus DFY",
-  description: "Сопровождение под ключ в США или UK для русскоязычных digital- и corporate-специалистов.",
+  title: "Услуги CareerPlus",
+  description: "Курс, консультация и сопровождение под ключ для выхода на международный рынок труда.",
   alternates: {
     canonical: "/services"
   }
 };
 
 const companies = ["Apple", "TikTok", "Meta", "Pinterest", "Zoom", "Disney", "Universal"];
+
+const serviceFormats = [
+  {
+    eyebrow: "$79 · курс",
+    title: "Курс для самостоятельного поиска",
+    body: "Метод выхода на международный рынок: выбор страны, упаковка профиля, точечный поиск, рефералки, интервью и переговоры.",
+    cta: "Смотреть курс",
+    href: "/courses/work-abroad",
+    variant: "light"
+  },
+  {
+    eyebrow: "$100 · консультация",
+    title: "Час с Роксаной",
+    body: "Разбор вашей карьерной ситуации, честная оценка и план следующих шагов без обязательства идти в сопровождение.",
+    cta: "Записаться на консультацию",
+    href: "/consultation",
+    variant: "light"
+  },
+  {
+    eyebrow: "от $2 500 · под ключ",
+    title: "CareerPlus DFY",
+    body: "Команда помогает строить поиск: стратегия, упаковка профиля, точечная воронка, интервью и переговоры.",
+    cta: "Узнать о сопровождении",
+    href: "#dfy",
+    variant: "dark"
+  }
+];
 
 const forWhom = [
   "Уже работаете в digital или corporate и хотите выйти на международный рынок",
@@ -80,6 +107,45 @@ export default function ServicesPage() {
   return (
     <>
       <section className="hero-surface border-b border-ink/15 py-20 md:py-28">
+        <Container>
+          <SectionHeader
+            eyebrow="Услуги"
+            title="Выберите формат работы"
+            description="Курс, разовая консультация или сопровождение под ключ. Все варианты живут здесь — выберите то, что сейчас подходит по задаче."
+          />
+          <div className="mt-10 grid gap-5 lg:grid-cols-3">
+            {serviceFormats.map((item) => (
+              <article
+                key={item.title}
+                className={
+                  item.variant === "dark"
+                    ? "rounded-[1.75rem] border border-accent bg-ink p-8 text-white"
+                    : "rounded-[1.75rem] border border-ink/20 bg-white p-8"
+                }
+              >
+                <p className={item.variant === "dark" ? "text-sm font-semibold text-white/70" : "text-sm font-semibold text-accent"}>
+                  {item.eyebrow}
+                </p>
+                <h2 className={item.variant === "dark" ? "mt-4 text-2xl font-semibold text-white" : "mt-4 text-2xl font-semibold text-ink"}>
+                  {item.title}
+                </h2>
+                <p className={item.variant === "dark" ? "mt-4 text-sm leading-6 text-white/70" : "mt-4 text-sm leading-6 text-muted"}>
+                  {item.body}
+                </p>
+                <ButtonLink
+                  href={item.href}
+                  variant={item.variant === "dark" ? "light" : "primary"}
+                  className="mt-8"
+                >
+                  {item.cta}
+                </ButtonLink>
+              </article>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section id="dfy" className="hero-surface border-b border-ink/15 py-20 md:py-28">
         <Container className="grid gap-10 lg:grid-cols-[1fr_0.85fr] lg:items-center">
           <div>
             <p className="mb-5 text-xs font-bold uppercase tracking-[0.24em] text-accent">CAREERPLUS DFY</p>
@@ -143,7 +209,7 @@ export default function ServicesPage() {
 
       <section className="py-20">
         <Container>
-          <SectionHeader title="Наши клиенты работают здесь" />
+          <SectionHeader title="Где работают клиенты" />
           <div className="mt-8 flex flex-wrap gap-3">
             {companies.map((company) => (
               <span key={company} className="rounded-full border border-ink/15 bg-white px-5 py-3 text-sm font-extrabold uppercase tracking-tight text-ink/70">
@@ -151,7 +217,6 @@ export default function ServicesPage() {
               </span>
             ))}
           </div>
-          <ButtonLink href="/cases" className="mt-8">Смотреть кейсы клиентов</ButtonLink>
         </Container>
       </section>
 

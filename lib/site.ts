@@ -19,9 +19,6 @@ export const site = {
 
 export const navItems = [
   { label: "Услуги", href: "/services" },
-  { label: "Курсы", href: "/courses" },
-  { label: "Консультация", href: "/consultation" },
-  { label: "Кейсы", href: "/cases" },
   { label: "Как работаем", href: "/how-we-work" },
   { label: "Калькулятор", href: "/calculator" }
 ];
