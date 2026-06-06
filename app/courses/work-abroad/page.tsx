@@ -380,9 +380,6 @@ export default function WorkAbroadCoursePage() {
               <PricingCard key={tier.name} tier={tier} />
             ))}
           </div>
-          <p className="mt-6 text-sm leading-6 text-muted">
-            Описание для Whop checkout: «Доступ к курсу откроется {courseAccessDate}. После оплаты вы получите информацию о доступе через Whop».
-          </p>
         </Container>
       </section>
 
