@@ -117,30 +117,6 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <section className="border-y border-ink/15 bg-soft/70 py-20">
-        <Container className="grid gap-8 md:grid-cols-[0.8fr_1.2fr]">
-          <div className="rounded-[1.75rem] border border-ink/20 bg-white p-6">
-            <div className="flex aspect-square items-center justify-center rounded-2xl bg-soft text-6xl font-extrabold text-accent">R</div>
-            <p className="mt-4 text-center text-xs text-muted">Фото Роксаны можно заменить перед запуском</p>
-          </div>
-          <div className="rounded-[1.75rem] border border-ink/20 bg-white p-8">
-            <p className="text-sm font-bold uppercase tracking-[0.2em] text-accent">КТО Я</p>
-            <h2 className="mt-4 text-3xl font-semibold text-ink">Роксана, основательница CareerPlus</h2>
-            <div className="mt-5 grid gap-4 text-base leading-8 text-muted">
-              <p>
-                Карьерный центр CareerPlus я начала делать сама — четыре года назад, потому что видела, как
-                русскоязычные специалисты приезжают в США и UK и теряются. Рассылают сотни резюме, идут на первое
-                предложение, через год выгорают.
-              </p>
-              <p>
-                Я за то, чтобы каждый кайфовал от своей работы в найме. Не любил её обязательно — а понимал, во что
-                вписался и зачем. Это и есть та самая «карьера с умом», которую мы строим вместе с клиентами.
-              </p>
-            </div>
-          </div>
-        </Container>
-      </section>
-
       <section id="formats" className="py-20">
         <Container>
           <SectionHeader
