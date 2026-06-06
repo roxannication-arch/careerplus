@@ -12,8 +12,8 @@ export const site = {
   calendly: "https://calendly.com/roxannication/1-1-meeting",
   whop: {
     course: "https://whop.com/checkout/plan_ksRtbnaFlteub",
-    review: "https://whop.com/careerplus-work-abroad-review-placeholder",
-    premium: "https://whop.com/careerplus-work-abroad-premium-placeholder"
+    review: "https://whop.com/checkout/plan_YDCf3Y0c0n5A7",
+    premium: "https://whop.com/checkout/plan_O3vaDd5JmdLxl"
   }
 };
 
