@@ -7,7 +7,7 @@ import { SectionHeader } from "@/components/SectionHeader";
 export const metadata: Metadata = {
   title: "Работа за рубежом для профессионалов",
   description:
-    "CareerPlus помогает русскоязычным специалистам выходить на международный рынок труда под ключ или через курсы.",
+    "CareerPlus помогает русскоязычным специалистам выходить на международный рынок труда под ключ или через консультацию.",
   alternates: {
     canonical: "/"
   }
@@ -107,7 +107,7 @@ export default function HomePage() {
           <div className="grid gap-5 text-base leading-8 text-muted">
             <p>
               CareerPlus — карьерный центр для русскоязычных иммигрантов. Мы первые, кто делает поиск работы в США и
-              UK под ключ: не разовая консультация, не курс, а команда, которая ведёт переход от стратегии до оффера.
+              UK под ключ: не разовая консультация, не разовая услуга, а команда, которая ведёт переход от стратегии до оффера.
             </p>
             <p>
               Работаем с теми, у кого уже есть профессия — digital и corporate специалистами, которые хотят выйти на
@@ -120,21 +120,11 @@ export default function HomePage() {
       <section id="formats" className="py-20">
         <Container>
           <SectionHeader
-            eyebrow="Три формата"
+            eyebrow="Два формата"
             title="Выбирайте, как удобнее"
-            description="Курс — если идёте сами. Консультация — если нужен час честного разбора. Под ключ — если хотите, чтобы команда делала поиск вместе с вами."
+            description="Нужен разовый разбор — берите консультацию. Хотите, чтобы команда делала поиск вместе с вами — смотрите сопровождение под ключ."
           />
-          <div className="mt-10 grid gap-5 lg:grid-cols-3">
-            <article className="rounded-[1.75rem] border border-ink/20 bg-white p-8">
-              <p className="text-sm font-semibold text-accent">$79 · курс</p>
-              <h2 className="mt-4 text-2xl font-semibold tracking-tight text-ink">Работа за рубежом для digital-специалистов</h2>
-              <div className="mt-5 grid gap-4 text-sm leading-6 text-muted">
-                <p><strong className="text-ink">Кому подходит:</strong> есть профессия, хотите идти сами, но не наугад.</p>
-                <p><strong className="text-ink">Что получите:</strong> 8 уроков, шаблоны, чек-листы, метод поиска без слепых рассылок.</p>
-              </div>
-              <ButtonLink href="/courses/work-abroad" className="mt-8">Смотреть курс</ButtonLink>
-            </article>
-
+          <div className="mt-10 grid gap-5 lg:grid-cols-2">
             <article className="rounded-[1.75rem] border border-ink/20 bg-white p-8">
               <p className="text-sm font-semibold text-accent">$100 · 1 час</p>
               <h2 className="mt-4 text-2xl font-semibold tracking-tight text-ink">Консультация с Роксаной</h2>

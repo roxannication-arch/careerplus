@@ -10,11 +10,6 @@ export const site = {
   consultationWhop: "https://whop.com/checkout/plan_zae3POrVmFgQP",
   consultationFormspree: "https://formspree.io/f/mvznznke",
   calendly: "https://calendly.com/roxannication/1-1-meeting",
-  whop: {
-    course: "https://whop.com/checkout/plan_ksRtbnaFlteub",
-    review: "https://whop.com/checkout/plan_YDCf3Y0c0n5A7",
-    premium: "https://whop.com/checkout/plan_O3vaDd5JmdLxl"
-  }
 };
 
 export const navItems = [

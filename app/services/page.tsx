@@ -6,7 +6,7 @@ import { SectionHeader } from "@/components/SectionHeader";
 
 export const metadata: Metadata = {
   title: "Услуги CareerPlus",
-  description: "Курс, консультация и сопровождение под ключ для выхода на международный рынок труда.",
+  description: "Консультация и сопровождение под ключ для выхода на международный рынок труда.",
   alternates: {
     canonical: "/services"
   }
@@ -15,14 +15,6 @@ export const metadata: Metadata = {
 const companies = ["Apple", "TikTok", "Meta", "Pinterest", "Zoom", "Disney", "Universal"];
 
 const serviceFormats = [
-  {
-    eyebrow: "$79 · курс",
-    title: "Курс для самостоятельного поиска",
-    body: "Метод выхода на международный рынок: выбор страны, упаковка профиля, точечный поиск, рефералки, интервью и переговоры.",
-    cta: "Смотреть курс",
-    href: "/courses/work-abroad",
-    variant: "light"
-  },
   {
     eyebrow: "$100 · консультация",
     title: "Час с Роксаной",
@@ -111,9 +103,9 @@ export default function ServicesPage() {
           <SectionHeader
             eyebrow="Услуги"
             title="Выберите формат работы"
-            description="Курс, разовая консультация или сопровождение под ключ. Все варианты живут здесь — выберите то, что сейчас подходит по задаче."
+            description="Разовая консультация или сопровождение под ключ. Оба варианта живут здесь — выберите то, что сейчас подходит по задаче."
           />
-          <div className="mt-10 grid gap-5 lg:grid-cols-3">
+          <div className="mt-10 grid gap-5 lg:grid-cols-2">
             {serviceFormats.map((item) => (
               <article
                 key={item.title}
