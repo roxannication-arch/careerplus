@@ -373,7 +373,7 @@ export default function WorkAbroadCoursePage() {
           <SectionHeader
             eyebrow="Тарифы"
             title="Выбери формат первой волны"
-            description="Каждая кнопка ведёт на отдельный Whop SKU. Замените placeholder URL на финальные ссылки перед запуском."
+            description="Выберите формат доступа к курсу и дополнительной поддержки."
           />
           <div className="mt-10 grid gap-5 lg:grid-cols-3">
             {pricing.map((tier) => (
