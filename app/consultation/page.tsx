@@ -1,0 +1,141 @@
+import type { Metadata } from "next";
+import { ButtonLink } from "@/components/ButtonLink";
+import { ConsultationForm } from "@/components/ConsultationForm";
+import { Container } from "@/components/Container";
+import { SectionHeader } from "@/components/SectionHeader";
+
+export const metadata: Metadata = {
+  title: "Консультация за $100",
+  description: "Час с Роксаной: разбор карьерной ситуации, честная оценка и план следующих шагов.",
+  alternates: {
+    canonical: "/consultation"
+  }
+};
+
+const forWhom = [
+  "Думаете про международный рынок, но не уверены, куда двигаться",
+  "Уже что-то делаете самостоятельно, но застряли в одном из этапов",
+  "Не готовы пока к сопровождению под ключ — нужен честный взгляд со стороны",
+  "Хотите конкретный план следующих шагов, а не общие советы"
+];
+
+const inside = [
+  {
+    title: "Разбор вашей ситуации без приукрашиваний",
+    body: "Где вы сейчас на самом деле — без вежливых отговорок. Профессия, рынок, опыт, что уже пробовали, во что упёрлись."
+  },
+  {
+    title: "Куда вы реально можете дойти",
+    body: "Прямой ответ: какие рынки вам подходят, а где упрётесь в стену. Что работает в вашем случае, а что — слив времени."
+  },
+  {
+    title: "Пошаговый план, не общие советы",
+    body: "Что делать первым, что вторым, что третьим — под вашу ситуацию, не из учебника. План пришлю на почту после звонка."
+  },
+  {
+    title: "Ответы на ваши вопросы",
+    body: "Про рынок, спонсорство визы, зарплаты, переговоры — то, что в гугле не нагуглить."
+  }
+];
+
+const steps = [
+  {
+    title: "Выберем рынок",
+    body: "Разберём, куда вам логичнее целиться: США, UK, remote или другой международный рынок — с учётом профессии, документов и опыта."
+  },
+  {
+    title: "Поймём вашу планку",
+    body: "Посмотрим, на какие роли и уровень вы можете претендовать сейчас, где вы недооцениваете себя, а где ожидания нужно заземлить."
+  },
+  {
+    title: "Найдём слабое место",
+    body: "Поймём, что тормозит поиск: резюме, LinkedIn, позиционирование, английский, выбор компаний, интервью или переговоры."
+  },
+  {
+    title: "Соберём 3 следующих шага",
+    body: "Уйдёте не с общими советами, а с конкретным планом: что исправить, куда идти и что делать в первую очередь."
+  }
+];
+
+export default function ConsultationPage() {
+  return (
+    <>
+      <section className="hero-surface border-b border-ink/15 py-20 md:py-28">
+        <Container>
+          <p className="mb-5 text-xs font-bold uppercase tracking-[0.24em] text-accent">КОНСУЛЬТАЦИЯ · $100 · ~1 ЧАС</p>
+          <h1 className="max-w-4xl text-balance text-5xl font-extrabold uppercase leading-[0.95] tracking-tight text-ink md:text-7xl">
+            Час со мной — разобраться, что делать дальше
+          </h1>
+          <ButtonLink href="#consultation-form" className="mt-8">
+            Записаться на консультацию
+          </ButtonLink>
+        </Container>
+      </section>
+
+      <section className="py-20">
+        <Container>
+          <SectionHeader title="Когда это подходит" />
+          <div className="mt-10 grid gap-4 md:grid-cols-2">
+            {forWhom.map((item) => (
+              <div key={item} className="rounded-2xl border border-ink/20 bg-white p-6 text-sm leading-6 text-muted">
+                <span className="mr-2 text-accent">✓</span>{item}
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section className="border-y border-ink/15 bg-soft/70 py-20">
+        <Container>
+          <SectionHeader title="Что внутри" />
+          <div className="mt-8 grid gap-3 md:grid-cols-2">
+            {inside.map((item, index) => (
+              <article key={item.title} className="rounded-2xl border border-ink/20 bg-white p-5">
+                <p className="text-sm font-semibold text-accent">0{index + 1}</p>
+                <h3 className="mt-2 text-lg font-semibold text-ink">{item.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-muted">{item.body}</p>
+              </article>
+            ))}
+          </div>
+          <p className="mt-6 text-sm leading-6 text-muted">
+            <strong className="text-ink">После звонка:</strong> пришлю на почту пошаговый план стратегии лично для вас — рынок, действия, приоритеты.
+          </p>
+        </Container>
+      </section>
+
+      <section className="py-20">
+        <Container>
+          <SectionHeader title="Как это работает" />
+          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+            {steps.map((step, index) => (
+              <article key={step.title} className="rounded-[1.75rem] border border-ink/20 bg-white p-6">
+                <p className="text-sm font-semibold text-accent">0{index + 1}</p>
+                <h3 className="mt-3 text-lg font-semibold text-ink">{step.title}</h3>
+                <p className="mt-3 text-sm leading-6 text-muted">{step.body}</p>
+              </article>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section className="border-y border-ink/15 bg-soft/70 py-20">
+        <Container className="max-w-3xl">
+          <ConsultationForm />
+        </Container>
+      </section>
+
+      <section className="px-5 py-20 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-5xl rounded-[2rem] border border-accent bg-accent p-8 text-center md:p-12">
+          <h2 className="text-3xl font-bold tracking-tight text-white md:text-5xl">Готовы поговорить?</h2>
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-white/85">
+            Час — не так много времени, но достаточно, чтобы получить честный план и сэкономить месяцы движения не туда.
+          </p>
+          <ButtonLink href="#consultation-form" variant="light" className="mt-8 !text-ink">
+            Записаться на консультацию
+          </ButtonLink>
+          <p className="mt-5 text-sm text-white/80">После анкеты откроется оплата, после оплаты — выбор времени для звонка.</p>
+        </div>
+      </section>
+    </>
+  );
+}

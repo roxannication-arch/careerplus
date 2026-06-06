@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --color-page: #fbfaf7;
+  --color-primary: #fbfaf7;
+  --color-secondary: #ffffff;
+  --color-accent: #8f2f3d;
+  --color-accent-hover: #6f2430;
+  --color-muted: #5f626b;
+  --color-border: #d8d2c8;
+  --color-ink: #171717;
+  --color-soft: #efede8;
+  --font-sans: var(--font-inter), Inter, sans-serif;
+}
+
+:root {
+  color-scheme: light;
+  background: #fbfaf7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(23, 23, 23, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 23, 23, 0.035) 1px, transparent 1px),
+    #fbfaf7;
+  background-size: 64px 64px;
+  color: #171717;
+  font-family: var(--font-inter), Inter, sans-serif;
+}
+
+::selection {
+  background: rgba(143, 47, 61, 0.18);
+  color: #171717;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+input,
+textarea,
+select {
+  color-scheme: light;
+}
+
+.hero-surface {
+  background:
+    radial-gradient(circle at 78% 16%, rgba(143, 47, 61, 0.08), transparent 26rem),
+    linear-gradient(135deg, #ffffff 0%, #fbfaf7 54%, #efede8 100%);
+}
+
+.reference-card {
+  border: 1px solid #171717;
+  background: #ffffff;
+}
+
+.brand-panel {
+  background: #262321;
+  color: #ffffff;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
