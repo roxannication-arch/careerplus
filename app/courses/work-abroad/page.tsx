@@ -6,20 +6,19 @@ import { Container } from "@/components/Container";
 import { SectionHeader } from "@/components/SectionHeader";
 import { site } from "@/lib/site";
 
-const recordingStartDate = "17 июня 2026";
-const accessWindow = "3–4 недели";
+const courseAccessDate = "20 июня";
 
 export const metadata: Metadata = {
   title: "Курс: работа за рубежом для digital-специалистов",
   description:
-    "Предзаказ курса CareerPlus: 8 уроков и метод выхода на международный рынок для digital-специалистов. Доступ через 3–4 недели.",
+    "Курс CareerPlus: 8 уроков и метод выхода на международный рынок для digital-специалистов. Доступ к курсу — 20 июня.",
   alternates: {
     canonical: "/courses/work-abroad"
   },
   openGraph: {
     title: "Работа за рубежом для digital-специалистов",
     description:
-      "Найди удалённую работу за рубежом — не выходя из своего города. Предзаказ курса CareerPlus от $79.",
+      "Найди удалённую работу за рубежом — не выходя из своего города. Курс CareerPlus от $79, доступ — 20 июня.",
     images: ["/og.svg"]
   }
 };
@@ -30,7 +29,7 @@ const pricing = [
     price: "$79",
     cta: "Купить $79",
     href: site.whop.course,
-    label: "Предзаказ: $97 после старта",
+    label: "Доступ к курсу — 20 июня",
     popular: false,
     features: [
       ["Все 8 уроков", true],
@@ -152,8 +151,8 @@ const faq = [
       "Оплата идёт через Whop. Доступные способы зависят от платформы и вашей страны. Мы не даём схем обхода ограничений, только обзор легальных вариантов."
   },
   {
-    question: "Что если курс не подойдёт?",
-    answer: "Есть гарантия возврата 14 дней после открытия доступа к материалам. Напишите нам, и мы обработаем запрос по правилам платформы."
+    question: "Можно ли задать вопрос перед покупкой?",
+    answer: "Если хотите уточнить, подходит ли вам курс, напишите нам до оплаты — подскажем по вашей ситуации и формату."
   },
   {
     question: "Можно ли проходить с телефона?",
@@ -165,7 +164,7 @@ const faq = [
   },
   {
     question: "Когда будет доступ к материалам?",
-    answer: `Это предзаказ: старт записи — ${recordingStartDate}. Доступ откроется через ${accessWindow} после оплаты. Вы покупаете место в первой волне по предпродажной цене.`
+    answer: `Доступ к материалам откроется ${courseAccessDate}. После оплаты вы получите информацию о доступе через Whop.`
   }
 ];
 
@@ -239,12 +238,12 @@ export default function WorkAbroadCoursePage() {
               </a>
             </div>
             <p className="mt-4 text-sm leading-6 text-muted">
-              Оплата через Whop · доступ через {accessWindow} · гарантия возврата 14 дней
+              Оплата через Whop · доступ к курсу — {courseAccessDate}
             </p>
             <div className="mt-8 rounded-[1.75rem] border border-ink/20 bg-white p-6">
-              <p className="text-sm font-bold text-ink">Предзаказ честно:</p>
+              <p className="text-sm font-bold text-ink">Доступ к курсу</p>
               <p className="mt-2 text-sm leading-6 text-muted">
-                Курс ещё не записан. Старт записи — {recordingStartDate}. Первая цена $79 действует на предпродаже, после старта базовый тариф планируется от $97.
+                Доступ к материалам откроется {courseAccessDate}. После оплаты вы получите информацию о доступе через Whop.
               </p>
             </div>
           </div>
@@ -382,7 +381,7 @@ export default function WorkAbroadCoursePage() {
             ))}
           </div>
           <p className="mt-6 text-sm leading-6 text-muted">
-            Описание для Whop checkout: «Вы покупаете предзаказ. Старт записи — {recordingStartDate}, доступ откроется через {accessWindow}. Гарантия возврата 14 дней».
+            Описание для Whop checkout: «Доступ к курсу откроется {courseAccessDate}. После оплаты вы получите информацию о доступе через Whop».
           </p>
         </Container>
       </section>
@@ -457,7 +456,7 @@ export default function WorkAbroadCoursePage() {
           >
             Получить доступ за $79
           </a>
-          <p className="mt-5 text-sm text-white/80">Гарантия возврата 14 дней · оплата через Whop</p>
+          <p className="mt-5 text-sm text-white/80">Оплата через Whop · доступ к курсу — {courseAccessDate}</p>
         </div>
       </section>
     </>
