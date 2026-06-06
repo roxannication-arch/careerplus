@@ -43,27 +43,14 @@ export default function ConsultationPage() {
   return (
     <>
       <section className="hero-surface border-b border-ink/15 py-20 md:py-28">
-        <Container className="grid gap-10 lg:grid-cols-[1fr_0.8fr] lg:items-center">
-          <div>
-            <p className="mb-5 text-xs font-bold uppercase tracking-[0.24em] text-accent">КОНСУЛЬТАЦИЯ · $100 · ~1 ЧАС</p>
-            <h1 className="text-balance text-5xl font-extrabold uppercase leading-[0.95] tracking-tight text-ink md:text-7xl">
-              Час со мной — разобраться, что делать дальше
-            </h1>
-            <p className="mt-6 max-w-2xl text-base leading-8 text-muted md:text-lg">
-              Не сопровождение под ключ, а час разговора со мной лично. Где вы сейчас, что реально с этим делать,
-              какой план действий. Прямой разбор без сахара.
-            </p>
-            <ButtonLink href="#consultation-form" className="mt-8">
-              Записаться на консультацию
-            </ButtonLink>
-          </div>
-          <div className="rounded-[2rem] border border-ink/20 bg-white p-8">
-            <p className="text-sm font-bold uppercase tracking-[0.2em] text-accent">Коротко</p>
-            <div className="mt-6 grid gap-4 text-sm leading-6 text-muted">
-              <p>Сначала анкета, потом оплата. Так я не захожу в звонок вслепую.</p>
-              <p>После оплаты Whop откроет страницу выбора времени в Calendly.</p>
-            </div>
-          </div>
+        <Container>
+          <p className="mb-5 text-xs font-bold uppercase tracking-[0.24em] text-accent">КОНСУЛЬТАЦИЯ · $100 · ~1 ЧАС</p>
+          <h1 className="max-w-4xl text-balance text-5xl font-extrabold uppercase leading-[0.95] tracking-tight text-ink md:text-7xl">
+            Час со мной — разобраться, что делать дальше
+          </h1>
+          <ButtonLink href="#consultation-form" className="mt-8">
+            Записаться на консультацию
+          </ButtonLink>
         </Container>
       </section>
 
