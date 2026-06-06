@@ -406,22 +406,6 @@ export default function WorkAbroadCoursePage() {
         </Container>
       </section>
 
-      <section className="py-20">
-        <Container className="grid gap-8 md:grid-cols-[0.8fr_1.2fr]">
-          <div className="rounded-[1.75rem] border border-ink/20 bg-white p-6">
-            <div className="flex aspect-square items-center justify-center rounded-2xl bg-soft text-6xl font-extrabold text-accent">R</div>
-            <p className="mt-4 text-center text-xs text-muted">Фото Роксаны можно заменить перед запуском</p>
-          </div>
-          <div className="rounded-[1.75rem] border border-ink/20 bg-white p-8">
-            <p className="text-sm font-bold uppercase tracking-[0.2em] text-accent">Об авторе</p>
-            <h2 className="mt-4 text-3xl font-semibold text-ink">Роксана, основатель CareerPlus.</h2>
-            <p className="mt-5 text-base leading-8 text-muted">
-              5+ лет в US immigration paralegal и corporate Global Mobility. Помогаю русскоязычным выходить на международный рынок труда осознанно — без слепых рассылок и без сказок про лёгкие деньги.
-            </p>
-          </div>
-        </Container>
-      </section>
-
       <section className="border-y border-ink/15 bg-soft/70 py-20">
         <Container className="max-w-4xl">
           <SectionHeader eyebrow="FAQ" title="Частые вопросы" />
