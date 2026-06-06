@@ -20,16 +20,22 @@ const forWhom = [
 ];
 
 const inside = [
-  "Разбор вашей текущей ситуации — профессия, рынок, опыт, контекст",
-  "Честная оценка: где вы и что реально с этим делать",
-  "Конкретный план следующих 3 шагов",
-  "Ответы на ваши вопросы"
-];
-
-const notInside = [
-  "Это не аудит резюме — это разговор о стратегии",
-  "Это не обучение — за час у вас не появится новый навык",
-  "Это не гарантия оффера — это направление, не результат"
+  {
+    title: "Разбор вашей ситуации без приукрашиваний",
+    body: "Где вы сейчас на самом деле — без вежливых отговорок. Профессия, рынок, опыт, что уже пробовали, во что упёрлись."
+  },
+  {
+    title: "Куда вы реально можете дойти",
+    body: "Прямой ответ: какие рынки вам подходят, а где упрётесь в стену. Что работает в вашем случае, а что — слив времени."
+  },
+  {
+    title: "Пошаговый план, не общие советы",
+    body: "Что делать первым, что вторым, что третьим — под вашу ситуацию, не из учебника. План пришлю на почту после звонка."
+  },
+  {
+    title: "Ответы на ваши вопросы",
+    body: "Про рынок, спонсорство визы, зарплаты, переговоры — то, что в гугле не нагуглить."
+  }
 ];
 
 const steps = [
@@ -80,34 +86,26 @@ export default function ConsultationPage() {
       </section>
 
       <section className="border-y border-ink/15 bg-soft/70 py-20">
-        <Container className="grid gap-8 lg:grid-cols-2">
-          <div>
-            <SectionHeader title="Что внутри часа" />
-            <div className="mt-8 grid gap-3">
-              {inside.map((item, index) => (
-                <div key={item} className="rounded-2xl border border-ink/20 bg-white p-5">
-                  <p className="text-sm font-semibold text-accent">0{index + 1}</p>
-                  <p className="mt-2 text-sm leading-6 text-muted">{item}</p>
-                </div>
-              ))}
-            </div>
+        <Container>
+          <SectionHeader title="Что внутри" />
+          <div className="mt-8 grid gap-3 md:grid-cols-2">
+            {inside.map((item, index) => (
+              <article key={item.title} className="rounded-2xl border border-ink/20 bg-white p-5">
+                <p className="text-sm font-semibold text-accent">0{index + 1}</p>
+                <h3 className="mt-2 text-lg font-semibold text-ink">{item.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-muted">{item.body}</p>
+              </article>
+            ))}
           </div>
-          <div>
-            <SectionHeader title="Чего внутри часа нет" />
-            <div className="mt-8 grid gap-3">
-              {notInside.map((item) => (
-                <div key={item} className="rounded-2xl border border-ink/20 bg-white p-5 text-sm leading-6 text-muted">
-                  <span className="mr-2 text-accent">×</span>{item}
-                </div>
-              ))}
-            </div>
-          </div>
+          <p className="mt-6 text-sm leading-6 text-muted">
+            <strong className="text-ink">После звонка:</strong> пришлю на почту пошаговый план стратегии лично для вас — рынок, действия, приоритеты.
+          </p>
         </Container>
       </section>
 
       <section className="py-20">
         <Container>
-          <SectionHeader title="Что вы получите за час" />
+          <SectionHeader title="Как это работает" />
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {steps.map((step, index) => (
               <article key={step.title} className="rounded-[1.75rem] border border-ink/20 bg-white p-6">
