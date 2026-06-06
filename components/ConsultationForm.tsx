@@ -36,11 +36,6 @@ export function ConsultationForm() {
   return (
     <form id="consultation-form" onSubmit={handleSubmit} className="rounded-[2rem] border border-ink/20 bg-white p-6 md:p-8">
       <p className="text-sm font-bold uppercase tracking-[0.2em] text-accent">Анкета консультации</p>
-      <h2 className="mt-4 text-3xl font-semibold tracking-tight text-ink">Сначала контекст, потом оплата</h2>
-      <p className="mt-4 text-sm leading-6 text-muted">
-        Анкета нужна, чтобы Роксана пришла на звонок уже с пониманием вашей ситуации.
-      </p>
-
       <div className="mt-8 grid gap-5">
         <label className="grid gap-2 text-sm font-medium text-ink">
           Имя *
