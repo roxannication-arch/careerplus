@@ -29,7 +29,6 @@ npm run start
 - `/` — Home
 - `/services` — CareerPlus DFY
 - `/how-we-work` — Process
-- `/cases` — Client cases
 - `/courses` — Courses list
 - `/courses/work-abroad` — First course page
 - `/contact` — Contact

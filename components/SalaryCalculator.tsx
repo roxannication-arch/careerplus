@@ -50,7 +50,7 @@ const salaryBands = [
     uk: [55000, 82000, 115000],
     eu: [52000, 78000, 110000],
     remote: [65000, 105000, 150000],
-    insight: "Для дизайнеров важны не только визуалы, а продуктовые кейсы: research, conversion, adoption, retention."
+    insight: "Для дизайнеров важны не только визуалы, а продуктовые результаты: research, conversion, adoption, retention."
   },
   {
     keywords: ["analyst", "analytics", "data", "аналит"],
